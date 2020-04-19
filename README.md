@@ -20,6 +20,13 @@ in PHP 5.x and does not have very good programming practices, code quality, desi
 database normalization since it was just
 a practice for web development and to apply programming to my English studies.
 
+## Screenshots
+![Screenshot 1](https://raw.githubusercontent.com/TobiasBriones/word-knowledge/master/_repo/assets/screenshot-1.png)
+===
+![Screenshot 2](https://raw.githubusercontent.com/TobiasBriones/word-knowledge/master/_repo/assets/screenshot-2.png)
+===
+![Screenshot 3](https://raw.githubusercontent.com/TobiasBriones/word-knowledge/master/_repo/assets/screenshot-3.png)
+
 ## License
 Word Knowledge
 
