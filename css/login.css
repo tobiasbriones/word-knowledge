@@ -1,0 +1,51 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+#main {
+  position: relative;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#wrong p {
+  color: #D81B60;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.noa {
+  position: relative;
+  padding: 4%;
+  transform: translateY(20%);
+}
+
+.noa p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.noa p, .noa a {
+  position: relative;
+  display: block;
+}
+
+@media screen and (min-width: 400px) {
+  .noa {
+    padding: 2%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .noa {
+    padding: 3%;
+  }
+}

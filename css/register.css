@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+form {
+  margin: 2% 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#avatar {
+  width: 100%;
+}
+
+#avatar_btn {
+  width: 50%;
+  float: right;
+}
+
+#input_errors {
+  position: relative;
+  display: block;
+  font-style: italic;
+  color: #D32F2F;
+}
+
+@media screen and (min-width: 800px) {
+  #input_errors {
+    position: fixed;
+    width: 20%;
+    margin: 5%;
+    left: 70%;
+  }
+  
+  #avatar {
+    width: 60%;
+  }
+  
+  #avatar_btn {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  #avatar {
+    width: 50%;
+  }
+  
+  #avatar_btn {
+    width: 40%;
+    float: right;
+  }
+}

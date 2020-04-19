@@ -1,0 +1,95 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.categories {
+  width: 100%;
+  height: 72px;
+  background: #F0F0F0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.categories ul {
+  width: 100%;
+  height: 100%;
+}
+
+.categories ul li {
+  display: inline-block;
+  width: 11.1%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.categories ul li:hover {
+  background: #E0E0E0;
+}
+
+.input-field {
+  display: inline-table;
+  width: 28%;
+  margin: 2%;
+}
+
+.container {
+  float: right;
+}
+
+#editor {
+  margin-top: 2%;
+}
+
+.input-field textarea:focus + label {
+  color: #3F51B5;
+}
+
+.input-field input[type=text], .input-field input[type=password], .input-field .materialize-textarea {
+  border-bottom: 1px solid #3F51B5;
+  box-shadow: 0 1px 0 0 #3F51B5;
+}
+
+.input-field input[type=text]:focus, .input-field input[type=password]:focus {
+  border-bottom: 1px solid #283593;
+  box-shadow: 0 1px 0 0 #283593;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.advices {
+  position: absolute;
+  width: 25%;
+  padding: 1%;
+  top: 20%;
+}
+
+.advices li {
+  padding: 2%;
+  font-weight: bold;
+}
+
+.advices p {
+  margin-top: 5%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#s {
+  width: 90%;
+  margin-bottom: 5%;
+  left: 5%;
+}
+
+.message {
+  position: fixed;
+  display: none;
+  width: 60%;
+  top: 15%;
+  left: 20%;
+}

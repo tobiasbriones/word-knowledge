@@ -1,0 +1,46 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+nav {
+  height: 56px;
+}
+
+nav li {
+  cursor: pointer;
+}
+
+.logo-icon {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 32px;
+  top: 8px;
+  left: 8px;
+}
+
+.wk-icon {
+  background: url(../img/icons/wk.png);
+  background-size: 100% 100%;
+}
+
+.app-icon {
+  background: url(../img/icons/app_icon.png);
+  background-size: 100% 100%;
+}
+
+@media screen and (min-width: 600px) {
+  nav {
+    height: 64px;
+  }
+  
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+  }
+}

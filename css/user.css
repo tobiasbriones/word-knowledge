@@ -1,0 +1,171 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+body {
+  background: #263238;
+}
+
+.container {
+  padding: 8% 2% 0 2%;
+}
+
+.container .card-panel {
+  height: 15%;
+  min-height: 100px;
+}
+
+.avatar {
+  display: inline-block;
+  height: 100%;
+}
+
+.user {
+  position: absolute;
+  display: inline-block;
+  padding: 4%;
+  top: 50%;
+  font-size: 1.6rem;
+  transform: translateY(-50%);
+}
+
+.score, .sgc-points {
+  position: absolute;
+  display: inline-block;
+  padding: 4%;
+  font-size: 1.8rem;
+}
+
+.edit {
+  position: fixed;
+  top: 100%;
+  left: 100%;
+  -webkit-transform: translate(-150%, -150%);
+  transform: translate(-150%, -150%);
+}
+
+.msg-panel {
+  display: none;
+  width: 80%;
+  margin: 10% 10% 0 10%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.msg-panel > div {
+  margin: 10% 0;
+}
+
+.msg-panel a {
+  width: 95%;
+  left: 2.5%;
+}
+
+@media screen and (min-width: 480px) {
+  .container .card-panel {
+    height: 20%;
+    min-height: 110px;
+  }
+  
+  .user {
+    font-size: 2rem;
+  }
+  
+  .score, .sgc-points {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding: 5% 0;
+    top: 12%;
+  }
+  
+  .container .card-panel {
+    height: 20%;
+    max-height: 150px;
+  }
+  
+  .edit {
+    transform: translate(-200%, -200%);
+  }
+  
+  .msg-panel {
+    margin: 5% 10% 0 10%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container .card-panel {
+    height: 22%;
+    min-height: 120px;
+    max-height: 160px;
+  }
+  
+  .user {
+    font-size: 2.4rem;
+  }
+  
+  .score, .sgc-points {
+    font-size: 2.6rem;
+  }
+  
+  .msg-panel {
+    width: 50%;
+    margin: 5% 25% 0 25%;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .container {
+    top: 6%;
+  }
+  
+  .edit {
+    transform: translate(-250%, -200%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    transition: transform 200ms ease-out;
+  }
+  
+  .msg-panel {
+    position: absolute;
+    display: block;
+    width: 25%;
+    max-height: 460px;
+    margin: 0;
+    top: calc(2% + 76px);
+    right: 2%;
+    z-index: 1;
+    transition: all 200ms ease-out;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .container {
+    top: 4%;
+  }
+  
+  .user {
+    font-size: 2.6rem;
+  }
+  
+  .score, .sgc-points {
+    font-size: 2.8rem;
+  }
+}

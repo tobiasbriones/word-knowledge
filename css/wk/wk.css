@@ -1,0 +1,158 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+body {
+  min-height: 480px;
+  background: #FAFAFA;
+}
+
+#toolbar {
+  z-index: 2;
+}
+
+.container {
+  height: calc(100% - 56px);
+  transition: transform 600ms;
+}
+
+.content {
+  width: 100%;
+  height: 90%;
+  top: 5%;
+}
+
+.game {
+  width: 100%;
+  height: 100%;
+  padding: 0 2%;
+  overflow: auto;
+}
+
+.pair {
+  display: block;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.pair > span {
+  display: block;
+  width: 100%;
+  margin-bottom: 5%;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.pair-options {
+}
+
+.pair-options div {
+  width: 100%;
+  height: 20%;
+  margin-bottom: 7%;
+  cursor: pointer;
+  transition: transform 200ms;
+  border-radius: 0;
+}
+
+.pair-options div:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.pair-options div:active {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.pair-options div span {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.correct {
+}
+
+.study {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.study-sc {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5%;
+}
+
+.study-sc > span {
+  padding: 1% 0;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 480px) {
+  .game {
+    padding: 0 5%;
+  }
+  
+  .study {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    height: calc(100% - 64px);
+  }
+  
+  .game {
+    padding: 0 10%;
+  }
+  
+  .study-sc {
+    display: inline-table;
+    width: 49%;
+    height: auto;
+    margin-bottom: 2%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .game {
+    padding: 0;
+  }
+  
+  .pair {
+    display: inline-table;
+    width: 43%;
+    margin: 0 3% 5% 3%;
+  }
+  
+  .study {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .game {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .pair {
+    width: 41%;
+    margin: 0 4% 3% 4%;
+  }
+  
+  .study {
+    width: 80%;
+  }
+}

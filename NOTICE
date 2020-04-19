@@ -1,0 +1,77 @@
+Word Knowledge
+Copyright (c) 2015 Tobias Briones. All rights reserved.
+
+
+--------------------------------------------------------------------------------
+-- 							 THIRD PARTY IMAGES								  --
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+This project includes images provided by Pixabay (https://pixabay.com/),
+available under the Pixabay License (https://pixabay.com/service/license/);
+the complete list of images is listed next:
+
+- /img/categories/1.jpg:
+  from https://pixabay.com/photos/city-time-square-nyc-buildings-869064/
+  by   https://pixabay.com/users/foundry-923783/
+  
+- /img/categories/2.jpg:
+  from https://pixabay.com/photos/cheese-slicer-crackers-appetizers-650029/
+  by   https://pixabay.com/users/stevepb-282134/
+  
+- /img/categories/3.jpg:
+  from https://pixabay.com/photos/figures-toy-bus-talking-men-368751/
+  by   https://pixabay.com/users/ed_davad-281703/
+  
+- /img/categories/4.jpg:
+  from https://pixabay.com/photos/milky-way-stars-night-sky-923741/
+  by   https://pixabay.com/users/skeeze-272447/
+  
+- /img/categories/5.jpg:
+  from https://pixabay.com/photos/bonfire-flames-wood-logs-camping-698646/
+  by   https://pixabay.com/users/stocksnap-894430/
+  
+- /img/categories/6.jpg:
+  from https://pixabay.com/photos/objects-assortment-floor-ground-801922/
+  by   https://pixabay.com/users/free-photos-242387/
+  
+- /img/categories/7.jpg:
+  from https://pixabay.com/photos/canned-food-cans-supermarket-food-570114/
+  by   https://pixabay.com/users/publicdomainarchive-262011/
+  
+- /img/categories/8.jpg:
+  from https://pixabay.com/photos/colored-pencils-colour-pencils-686679/
+  by   https://pixabay.com/users/422737-422737/
+  
+- /img/categories/9.jpg:
+  from https://pixabay.com/photos/coffee-coffee-beans-grain-coffee-660394/
+  by   https://pixabay.com/users/uroburos-325152/
+  
+--------------------------------------------------------------------------------
+Icons from Material Design (https://material.io/resources/icons/?style=baseline),
+available under the Apache 2.0 License (https://www.apache.org/licenses/LICENSE-2.0.html):
+
+- /img/icons/msg.png
+  from https://material.io/resources/icons/?search=message&icon=message&style=baseline
+
+
+--------------------------------------------------------------------------------
+-- 							THIRD PARTY LIBRARIES							  --
+--------------------------------------------------------------------------------
+
+
+This project includes the password_compat library (MIT-Licensed)
+ * Copyright (c) 2012 Anthony Ferrara.
+
+This project includes the jQuery library (MIT-Licensed)
+ * Copyright (c) 2005, 2015 jQuery Foundation, Inc.
+ 
+This project includes the jquery.nicescroll library (MIT-Licensed)
+ * Copyright (c) 2011 InuYaksa.
+
+This project includes the JavaScript Cookie library (MIT-Licensed)
+ * Copyright (c) 2014 Klaus Hartl.
+ 
+This project includes the Materialize library (MIT-Licensed)
+ * Copyright (c) 2014-2015 Materialize.

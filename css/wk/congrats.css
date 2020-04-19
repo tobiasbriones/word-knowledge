@@ -1,0 +1,33 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+#congrats {
+  width: 80%;
+  height: 100%;
+}
+
+.cgt-score {
+  width: 100%;
+  height: 90%;
+}
+
+.cgt-score span {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.cgt-opts {
+  position: absolute;
+  width: 93%;
+  bottom: 5%;
+}
+
+.cgt-opts button {
+  width: 40%;
+  float: right;
+}

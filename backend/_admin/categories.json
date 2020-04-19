@@ -1,0 +1,96 @@
+{
+  "About grammar": [
+    "Adjectives",
+    "Adverbs",
+    "Irregular verbs (Participle)",
+    "Irregular verbs (Past)",
+    "Verbs"
+  ],
+  "Foods & Meals": [
+    "Beverages",
+    "Dairy products",
+    "Fish & Seafood",
+    "Fruits",
+    "Healthy & Unhealthy",
+    "Herbs",
+    "Meats & Seasoning",
+    "Pasta",
+    "Soups",
+    "Sweets & Desserts",
+    "Vegetables"
+  ],
+  "Miscellaneous": [
+    "Cardinal numbers",
+    "Colors",
+    "Health problems",
+    "Not rated",
+    "Ordinal numbers",
+    "Transportation"
+  ],
+  "Nature": [
+    "Fauna",
+    "Flora",
+    "Habitats",
+    "Natural phenomena",
+    "The universe",
+    "The weather & Seasons"
+  ],
+  "Parts of things": [
+    "The bicycle",
+    "The book",
+    "The car",
+    "The cell phone",
+    "The computer",
+    "The ship"
+  ],
+  "People": [
+    "Activities",
+    "Body parts",
+    "Chores",
+    "Clothing",
+    "Family & Relatives",
+    "Moods",
+    "Physical defects",
+    "Politics",
+    "Professions",
+    "Society",
+    "The look"
+  ],
+  "Places": [
+    "At home",
+    "At the airport",
+    "At the bank",
+    "At the bar",
+    "At the beach",
+    "At the beauty salon",
+    "At the bookstore",
+    "At the downtown",
+    "At the drugstore",
+    "At the gym",
+    "At the hardware store",
+    "At the hotel",
+    "At the mall",
+    "At the restaurant",
+    "At the school",
+    "At the supermarket",
+    "At the workplace"
+  ],
+  "Products & Things": [
+    "Appliances",
+    "Containers",
+    "Electronic",
+    "Everyday products",
+    "Furniture",
+    "Materials",
+    "Music"
+  ],
+  "Technicalities & Tools": [
+    "Business & Sales",
+    "Electricity & Electronic",
+    "Farm machinery",
+    "Law",
+    "Math & Physics",
+    "Mechanics",
+    "Science"
+  ]
+}

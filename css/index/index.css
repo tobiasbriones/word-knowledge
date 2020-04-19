@@ -1,0 +1,126 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+body {
+  background: #101010;
+}
+
+footer {
+  padding: 32px 64px;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+}
+
+footer p > i {
+  color: #737373;
+}
+
+#toolbar {
+  height: 128px;
+}
+
+#cookies-msg {
+  display: none;
+  padding: 16px 64px;
+  background: #00B0FF;
+}
+
+#cookies-msg.visible {
+  display: block;
+}
+
+#cookies-msg > p {
+  color: white;
+}
+
+#cookies-msg > span {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  padding: 8px;
+  transform: translateY(-50%);
+  color: darkred;
+  cursor: pointer;
+}
+
+.toolbar-menu {
+  width: 100%;
+  height: 48px;
+  top: -12px;
+}
+
+.menu-item {
+  height: 48px;
+  margin: 12px;
+}
+
+.menu-item a {
+  height: 48px;
+  line-height: 48px;
+  cursor: pointer;
+}
+
+.menu-item a:hover {
+  background-image: url(../../img/menu_item_hover.png);
+  background-size: 100% 100%;
+}
+
+.container {
+  height: calc(100% - 128px);
+  padding: 2% 0;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    min-height: 480px;
+  }
+  
+  #toolbar {
+    height: 136px;
+  }
+  
+  .container {
+    height: calc(100% - 136px);
+  }
+  
+  .content {
+    width: 63%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    min-height: 600px;
+  }
+  
+  .content {
+    width: 68%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .container {
+    width: 75%;
+  }
+  
+  .content {
+    width: 67%;
+    height: 100%;
+  }
+}

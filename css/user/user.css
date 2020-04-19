@@ -1,0 +1,167 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+body {
+  font-size: 1.5rem;
+  background: #263238;
+}
+
+#container {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 480px;
+  padding: 8% 2%;
+  transition: all 400ms;
+}
+
+.card-panel {
+  height: 100px;
+}
+
+.avatar {
+  display: inline-block;
+  height: 100%;
+}
+
+.user {
+  position: absolute;
+  display: inline-block;
+  padding: 4%;
+  top: 50%;
+  font-size: 1.4rem;
+  transform: translateY(-50%);
+}
+
+.score, .wk-points {
+  position: absolute;
+  display: inline-block;
+  padding: 4%;
+  top: 50%;
+  left: 50%;
+  font-size: 1.4rem;
+  transform: translate(-50%, -50%);
+}
+
+.edit {
+  position: fixed;
+  top: 100%;
+  left: 100%;
+  transition: all 500ms;
+  transform: translate(-150%, -150%);
+}
+
+@media screen and (min-width: 480px) {
+  .card-panel {
+    height: 120px;
+  }
+  
+  .user, .score, .wk-points {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #container {
+    position: absolute;
+    display: inline-block;
+    width: 90%;
+    height: calc(100% - 64px);
+    min-height: 480px;
+    padding: 15% 2%;
+    left: 5%;
+    transition: all 400ms;
+  }
+  
+  .user, .score, .wk-points {
+    font-size: 2rem;
+  }
+  
+  .edit {
+    transform: translate(-200%, -200%);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #container {
+    width: 70%;
+    left: 15%;
+  }
+  
+  .card-panel {
+    height: 45% !important;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  body {
+    font-size: 1.5rem;
+    overflow: hidden;
+  }
+  
+  #container {
+    width: 60%;
+    padding: 8% 2%;
+    left: 20%;
+  }
+  
+  .card-panel {
+    height: 20% !important;
+    top: 0;
+  }
+  
+  .avatar {
+    display: inline-block;
+    height: 100%;
+  }
+  
+  .user {
+    position: absolute;
+    display: inline-block;
+    padding: 4%;
+    top: 50%;
+    font-size: 1.4rem;
+    transform: translateY(-50%);
+  }
+  
+  .score, .wk-points {
+    position: absolute;
+    display: inline-block;
+    padding: 4%;
+    top: 50%;
+    left: 50%;
+    font-size: 1.4rem;
+    transform: translate(-50%, -50%);
+  }
+  
+  .edit {
+    position: fixed;
+    top: 100%;
+    left: 100%;
+    transition: all 500ms;
+    transform: translate(-150%, -150%);
+  }
+  
+  .card-panel {
+    height: 30%;
+    min-height: 120px;
+  }
+  
+  .user, .score, .wk-points {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .card-panel {
+    height: 42% !important;
+    top: 0;
+  }
+}

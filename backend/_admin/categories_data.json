@@ -1,0 +1,1877 @@
+[
+  {
+    "category": "About grammar",
+    "data": [
+      {
+        "subcategory": "Adjectives",
+        "data": []
+      },
+      {
+        "subcategory": "Adverbs",
+        "data": []
+      },
+      {
+        "subcategory": "Irregular verbs (Participle)",
+        "data": []
+      },
+      {
+        "subcategory": "Irregular verbs (Past)",
+        "data": []
+      },
+      {
+        "subcategory": "Verbs",
+        "data": []
+      }
+    ]
+  },
+  {
+    "category": "Foods & Meals",
+    "data": [
+      {
+        "subcategory": "Beverages",
+        "data": [
+          {
+            "english": "juice",
+            "spanish": "jugo"
+          },
+          {
+            "english": "beer",
+            "spanish": "cerveza"
+          },
+          {
+            "english": "glass of wine",
+            "spanish": "copa de vino"
+          },
+          {
+            "english": "champagne",
+            "spanish": "champaña"
+          },
+          {
+            "english": "dry",
+            "spanish": "seco"
+          }
+        ]
+      },
+      {
+        "subcategory": "Dairy products",
+        "data": []
+      },
+      {
+        "subcategory": "Fish & Seafood",
+        "data": [
+          {
+            "english": "eel",
+            "spanish": "anguila"
+          },
+          {
+            "english": "tuna",
+            "spanish": "atún"
+          },
+          {
+            "english": "cod",
+            "spanish": "bacalao"
+          },
+          {
+            "english": "albacore tuna",
+            "spanish": "bonito"
+          },
+          {
+            "english": "tin of tuna",
+            "spanish": "lata de atún"
+          },
+          {
+            "english": "sardine can",
+            "spanish": "lata de sardinas"
+          },
+          {
+            "english": "red snapper",
+            "spanish": "pargo"
+          },
+          {
+            "english": "salmon",
+            "spanish": "salmón"
+          },
+          {
+            "english": "trout",
+            "spanish": "trucha"
+          },
+          {
+            "english": "clams",
+            "spanish": "almejas"
+          },
+          {
+            "english": "cockles",
+            "spanish": "berberechos"
+          },
+          {
+            "english": "squid",
+            "spanish": "calamares"
+          },
+          {
+            "english": "shrimp",
+            "spanish": "camarones"
+          },
+          {
+            "english": "crab",
+            "spanish": "cangrejo de mar"
+          },
+          {
+            "english": "crawfish",
+            "spanish": "cangrejo de río"
+          },
+          {
+            "english": "crab spider",
+            "spanish": "centolla"
+          },
+          {
+            "english": "grilled shrimps",
+            "spanish": "gambas a la plancha"
+          },
+          {
+            "english": "fried shrimps",
+            "spanish": "gambas fritas"
+          },
+          {
+            "english": "shrimp scampi",
+            "spanish": "langostinos fritos a la milanesa"
+          },
+          {
+            "english": "lobster",
+            "spanish": "langosta"
+          }
+        ]
+      },
+      {
+        "subcategory": "Fruits",
+        "data": [
+          {
+            "english": "almonds",
+            "spanish": "almendras"
+          },
+          {
+            "english": "pineapple",
+            "spanish": "piña"
+          },
+          {
+            "english": "banana",
+            "spanish": "banana"
+          },
+          {
+            "english": "coconut",
+            "spanish": "coco"
+          },
+          {
+            "english": "cherry",
+            "spanish": "cereza"
+          },
+          {
+            "english": "plum",
+            "spanish": "ciruela"
+          },
+          {
+            "english": "peach",
+            "spanish": "melocotón"
+          },
+          {
+            "english": "raspberry",
+            "spanish": "frambuesa"
+          },
+          {
+            "english": "strawberry",
+            "spanish": "fresa"
+          },
+          {
+            "english": "fig",
+            "spanish": "higo"
+          },
+          {
+            "english": "lemon",
+            "spanish": "limón"
+          },
+          {
+            "english": "lime",
+            "spanish": "lima"
+          },
+          {
+            "english": "tangerine",
+            "spanish": "mandarina"
+          },
+          {
+            "english": "mango",
+            "spanish": "mango"
+          },
+          {
+            "english": "apple",
+            "spanish": "manzana"
+          }
+        ]
+      },
+      {
+        "subcategory": "Healthy & Unhealthy",
+        "data": [
+          {
+            "english": "low-calorie cooking",
+            "spanish": "cocina bajas en calorias"
+          },
+          {
+            "english": "vegetarian diet",
+            "spanish": "dieta vegetariana"
+          },
+          {
+            "english": "low-cholesterol meal",
+            "spanish": "comida baja en colesterol"
+          },
+          {
+            "english": "low-sodium meal",
+            "spanish": "comida con poca sal"
+          },
+          {
+            "english": "fat-free desserts",
+            "spanish": "postres sin grasa"
+          }
+        ]
+      },
+      {
+        "subcategory": "Herbs",
+        "data": []
+      },
+      {
+        "subcategory": "Meats & Seasoning",
+        "data": [
+          {
+            "english": "oil",
+            "spanish": "aceite"
+          },
+          {
+            "english": "pig",
+            "spanish": "marrano"
+          },
+          {
+            "english": "pork",
+            "spanish": "carne de cerdo"
+          },
+          {
+            "english": "consommé",
+            "spanish": "consomé"
+          },
+          {
+            "english": "salad dressing",
+            "spanish": "aderezo"
+          },
+          {
+            "english": "vinegar",
+            "spanish": "vinagre"
+          },
+          {
+            "english": "mustard",
+            "spanish": "mostaza"
+          },
+          {
+            "english": "pepper",
+            "spanish": "pimienta"
+          },
+          {
+            "english": "salt",
+            "spanish": "sal"
+          },
+          {
+            "english": "tomato sauce",
+            "spanish": "salsa de tomate"
+          }
+        ]
+      },
+      {
+        "subcategory": "Pasta",
+        "data": [
+          {
+            "english": "spaghetti",
+            "spanish": "espagueti"
+          },
+          {
+            "english": "vermicelli",
+            "spanish": "fideos"
+          },
+          {
+            "english": "lasagna",
+            "spanish": "lasaña"
+          },
+          {
+            "english": "macaroni",
+            "spanish": "macarrones"
+          },
+          {
+            "english": "noodles",
+            "spanish": "tallarines"
+          }
+        ]
+      },
+      {
+        "subcategory": "Soups",
+        "data": [
+          {
+            "english": "rice",
+            "spanish": "arroz"
+          },
+          {
+            "english": "chicken broth",
+            "spanish": "caldo de pollo"
+          },
+          {
+            "english": "vegetable broth",
+            "spanish": "caldo de verduras"
+          },
+          {
+            "english": "croutons",
+            "spanish": "crutones"
+          },
+          {
+            "english": "fish broth",
+            "spanish": "caldo de pescado"
+          }
+        ]
+      },
+      {
+        "subcategory": "Sweets & Desserts",
+        "data": [
+          {
+            "english": "pudding",
+            "spanish": "budín"
+          },
+          {
+            "english": "whipped cream",
+            "spanish": "crema batida"
+          },
+          {
+            "english": "custard",
+            "spanish": "crema pastelera"
+          },
+          {
+            "english": "ice cream",
+            "spanish": "helados"
+          },
+          {
+            "english": "assorted pastries",
+            "spanish": "dulces variados"
+          }
+        ]
+      },
+      {
+        "subcategory": "Vegetables",
+        "data": []
+      }
+    ]
+  },
+  {
+    "category": "Miscellaneous",
+    "data": [
+      {
+        "subcategory": "Cardinal numbers",
+        "data": []
+      },
+      {
+        "subcategory": "Colors",
+        "data": []
+      },
+      {
+        "subcategory": "Health problems",
+        "data": [
+          {
+            "english": "allergy",
+            "spanish": "alergia"
+          },
+          {
+            "english": "anemia",
+            "spanish": "anemia"
+          },
+          {
+            "english": "asthma",
+            "spanish": "asma"
+          },
+          {
+            "english": "heart attack",
+            "spanish": "ataque cardiaco"
+          },
+          {
+            "english": "cut",
+            "spanish": "cortada"
+          },
+          {
+            "english": "contagion",
+            "spanish": "contagio"
+          },
+          {
+            "english": "depression",
+            "spanish": "depresión"
+          },
+          {
+            "english": "diarreah",
+            "spanish": "diarrea"
+          },
+          {
+            "english": "headache",
+            "spanish": "dolor de cabeza"
+          },
+          {
+            "english": "toothache",
+            "spanish": "dolor de diente"
+          },
+          {
+            "english": "backache",
+            "spanish": "dolor de espalda"
+          },
+          {
+            "english": "stomachache",
+            "spanish": "dolor de estómago"
+          },
+          {
+            "english": "earache",
+            "spanish": "dolor de oído"
+          },
+          {
+            "english": "stress",
+            "spanish": "estrés"
+          },
+          {
+            "english": "fever",
+            "spanish": "fiebre"
+          },
+          {
+            "english": "flu",
+            "spanish": "gripe"
+          },
+          {
+            "english": "hiccups",
+            "spanish": "hipo"
+          },
+          {
+            "english": "itch",
+            "spanish": "picazón"
+          },
+          {
+            "english": "cold",
+            "spanish": "resfriado"
+          },
+          {
+            "english": "cough",
+            "spanish": "tos"
+          }
+        ]
+      },
+      {
+        "subcategory": "Not rated",
+        "data": []
+      },
+      {
+        "subcategory": "Ordinal numbers",
+        "data": []
+      },
+      {
+        "subcategory": "Transportation",
+        "data": []
+      }
+    ]
+  },
+  {
+    "category": "Nature",
+    "data": [
+      {
+        "subcategory": "Fauna",
+        "data": [
+          {
+            "english": "cat",
+            "spanish": "gato"
+          },
+          {
+            "english": "dog",
+            "spanish": "perro"
+          },
+          {
+            "english": "puppy",
+            "spanish": "perrito"
+          },
+          {
+            "english": "spider",
+            "spanish": "araña"
+          },
+          {
+            "english": "cow",
+            "spanish": "vaca"
+          }
+        ]
+      },
+      {
+        "subcategory": "Flora",
+        "data": [
+          {
+            "english": "bark",
+            "spanish": "corteza"
+          },
+          {
+            "english": "trunk",
+            "spanish": "tronco"
+          },
+          {
+            "english": "leaf",
+            "spanish": "hoja"
+          },
+          {
+            "english": "leaves",
+            "spanish": "hojas"
+          },
+          {
+            "english": "branch",
+            "spanish": "rama"
+          },
+          {
+            "english": "roots",
+            "spanish": "raíces"
+          },
+          {
+            "english": "twig",
+            "spanish": "ramita"
+          },
+          {
+            "english": "maple",
+            "spanish": "arce"
+          },
+          {
+            "english": "cactus",
+            "spanish": "cactus"
+          },
+          {
+            "english": "cedar",
+            "spanish": "cedro"
+          },
+          {
+            "english": "cypress",
+            "spanish": "ciprés"
+          },
+          {
+            "english": "weed",
+            "spanish": "maleza"
+          },
+          {
+            "english": "walnut tree",
+            "spanish": "nogal"
+          },
+          {
+            "english": "palm tree",
+            "spanish": "palmera"
+          },
+          {
+            "english": "pine",
+            "spanish": "pino"
+          },
+          {
+            "english": "oak",
+            "spanish": "roble"
+          }
+        ]
+      },
+      {
+        "subcategory": "Habitats",
+        "data": []
+      },
+      {
+        "subcategory": "Natural phenomena",
+        "data": [
+          {
+            "english": "hurricane",
+            "spanish": "huracán"
+          },
+          {
+            "english": "rain",
+            "spanish": "lluvia"
+          },
+          {
+            "english": "earthquake",
+            "spanish": "terremoto"
+          },
+          {
+            "english": "tornado",
+            "spanish": "tornado"
+          },
+          {
+            "english": "rainbow",
+            "spanish": "arco iris"
+          }
+        ]
+      },
+      {
+        "subcategory": "The universe",
+        "data": [
+          {
+            "english": "planet",
+            "spanish": "planeta"
+          },
+          {
+            "english": "asteroid",
+            "spanish": "asteroide"
+          },
+          {
+            "english": "star",
+            "spanish": "estrella"
+          },
+          {
+            "english": "galaxy",
+            "spanish": "galaxia"
+          },
+          {
+            "english": "black hole",
+            "spanish": "agujero negro"
+          }
+        ]
+      },
+      {
+        "subcategory": "The weather & Seasons",
+        "data": [
+          {
+            "english": "sunny",
+            "spanish": "soleado"
+          },
+          {
+            "english": "windy",
+            "spanish": "ventoso"
+          },
+          {
+            "english": "cloudy",
+            "spanish": "nublado"
+          },
+          {
+            "english": "summer",
+            "spanish": "verando"
+          },
+          {
+            "english": "windy",
+            "spanish": "invierno"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Parts of things",
+    "data": [
+      {
+        "subcategory": "The bicycle",
+        "data": []
+      },
+      {
+        "subcategory": "The book",
+        "data": []
+      },
+      {
+        "subcategory": "The car",
+        "data": []
+      },
+      {
+        "subcategory": "The cell phone",
+        "data": []
+      },
+      {
+        "subcategory": "The computer",
+        "data": []
+      },
+      {
+        "subcategory": "The ship",
+        "data": []
+      }
+    ]
+  },
+  {
+    "category": "People",
+    "data": [
+      {
+        "subcategory": "Activities",
+        "data": []
+      },
+      {
+        "subcategory": "Body parts",
+        "data": [
+          {
+            "english": "head",
+            "spanish": "cabeza"
+          },
+          {
+            "english": "back",
+            "spanish": "espalda"
+          },
+          {
+            "english": "eyes",
+            "spanish": "ojos"
+          },
+          {
+            "english": "hands",
+            "spanish": "manos"
+          },
+          {
+            "english": "arms",
+            "spanish": "brazos"
+          },
+          {
+            "english": "legs",
+            "spanish": "piernas"
+          },
+          {
+            "english": "feet",
+            "spanish": "piernas"
+          },
+          {
+            "english": "fingernails",
+            "spanish": "uñas de la mano"
+          },
+          {
+            "english": "toenails",
+            "spanish": "uñas de los pies"
+          },
+          {
+            "english": "hair",
+            "spanish": "pelo"
+          }
+        ]
+      },
+      {
+        "subcategory": "Chores",
+        "data": [
+          {
+            "english": "sweep",
+            "spanish": "barrer"
+          },
+          {
+            "english": "mop",
+            "spanish": "trapiar"
+          },
+          {
+            "english": "vacuum",
+            "spanish": "aspirar"
+          },
+          {
+            "english": "take out the trash",
+            "spanish": "sacar la basura"
+          },
+          {
+            "english": "clean up",
+            "spanish": "limpiar"
+          }
+        ]
+      },
+      {
+        "subcategory": "Clothing",
+        "data": [
+          {
+            "english": "coat",
+            "spanish": "abrigo"
+          },
+          {
+            "english": "hat",
+            "spanish": "sombrero"
+          },
+          {
+            "english": "boots",
+            "spanish": "botas"
+          },
+          {
+            "english": "shirt",
+            "spanish": "camisa"
+          },
+          {
+            "english": "socks",
+            "spanish": "calcetines"
+          },
+          {
+            "english": "gown",
+            "spanish": "bata"
+          },
+          {
+            "english": "blouse",
+            "spanish": "blusa"
+          },
+          {
+            "english": "bag",
+            "spanish": "bolso"
+          },
+          {
+            "english": "pants",
+            "spanish": "pantalones"
+          },
+          {
+            "english": "panty hose",
+            "spanish": "medias"
+          }
+        ]
+      },
+      {
+        "subcategory": "Family & Relatives",
+        "data": [
+          {
+            "english": "son",
+            "spanish": "hijo"
+          },
+          {
+            "english": "daughter",
+            "spanish": "hija"
+          },
+          {
+            "english": "father",
+            "spanish": "padre"
+          },
+          {
+            "english": "mother",
+            "spanish": "madre"
+          },
+          {
+            "english": "grandparents",
+            "spanish": "abuelos"
+          }
+        ]
+      },
+      {
+        "subcategory": "Moods",
+        "data": [
+          {
+            "english": "sad",
+            "spanish": "triste"
+          },
+          {
+            "english": "happy",
+            "spanish": "feliz"
+          },
+          {
+            "english": "angry",
+            "spanish": "enojado"
+          },
+          {
+            "english": "happiness",
+            "spanish": "felicidad"
+          },
+          {
+            "english": "sadness",
+            "spanish": "tristeza"
+          }
+        ]
+      },
+      {
+        "subcategory": "Physical defects",
+        "data": [
+          {
+            "english": "midget / dwarf",
+            "spanish": "enano"
+          },
+          {
+            "english": "giant",
+            "spanish": "gigante"
+          },
+          {
+            "english": "handicapped",
+            "spanish": "discapacitado"
+          },
+          {
+            "english": "one-handed",
+            "spanish": "manco"
+          },
+          {
+            "english": "dumb",
+            "spanish": "mudo"
+          },
+          {
+            "english": "deaf",
+            "spanish": "sordo"
+          },
+          {
+            "english": "deaf-mute",
+            "spanish": "sordomudo"
+          },
+          {
+            "english": "stammerer",
+            "spanish": "tartamudo"
+          },
+          {
+            "english": "one-eyed",
+            "spanish": "tuerto"
+          },
+          {
+            "english": "left-handed",
+            "spanish": "zurdo"
+          }
+        ]
+      },
+      {
+        "subcategory": "Politics",
+        "data": []
+      },
+      {
+        "subcategory": "Professions",
+        "data": [
+          {
+            "english": "lawyer",
+            "spanish": "abogado"
+          },
+          {
+            "english": "actor",
+            "spanish": "actor"
+          },
+          {
+            "english": "actress",
+            "spanish": "actriz"
+          },
+          {
+            "english": "police officer",
+            "spanish": "oficial de policía"
+          },
+          {
+            "english": "grocer",
+            "spanish": "almacenero"
+          },
+          {
+            "english": "archaeologist",
+            "spanish": "arqueólogo"
+          },
+          {
+            "english": "architect",
+            "spanish": "arquitecto"
+          },
+          {
+            "english": "astronaut",
+            "spanish": "astronauta"
+          },
+          {
+            "english": "athlete",
+            "spanish": "atleta"
+          },
+          {
+            "english": "flight attendant",
+            "spanish": "azafata"
+          },
+          {
+            "english": "bartender",
+            "spanish": "cantinero"
+          },
+          {
+            "english": "fire fighter",
+            "spanish": "bombero"
+          },
+          {
+            "english": "cameraman",
+            "spanish": "camarógrafo"
+          },
+          {
+            "english": "singer",
+            "spanish": "cantante"
+          },
+          {
+            "english": "butcher",
+            "spanish": "carnicero"
+          },
+          {
+            "english": "carpenter",
+            "spanish": "carpintero"
+          },
+          {
+            "english": "scientist",
+            "spanish": "científico"
+          },
+          {
+            "english": "chef",
+            "spanish": "cocinero"
+          },
+          {
+            "english": "accountant",
+            "spanish": "contador"
+          },
+          {
+            "english": "dentist",
+            "spanish": "dentista"
+          }
+        ]
+      },
+      {
+        "subcategory": "Society",
+        "data": []
+      },
+      {
+        "subcategory": "The look",
+        "data": [
+          {
+            "english": "trendy",
+            "spanish": "de moda"
+          },
+          {
+            "english": "well dressed",
+            "spanish": "bien vestido"
+          },
+          {
+            "english": "classic elegance",
+            "spanish": "elegancia clásica"
+          },
+          {
+            "english": "careless / sloppy",
+            "spanish": "descuidado"
+          },
+          {
+            "english": "messy",
+            "spanish": "desordenado"
+          },
+          {
+            "english": "elegant stylish",
+            "spanish": "elegante"
+          },
+          {
+            "english": "formal",
+            "spanish": "formal"
+          },
+          {
+            "english": "informal",
+            "spanish": "informal"
+          },
+          {
+            "english": "old-fashioned",
+            "spanish": "a la antigua"
+          },
+          {
+            "english": "casual",
+            "spanish": "casual"
+          },
+          {
+            "english": "modestly",
+            "spanish": "modestamente"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Places",
+    "data": [
+      {
+        "subcategory": "At home",
+        "data": [
+          {
+            "english": "garden",
+            "spanish": "jardín"
+          },
+          {
+            "english": "carpet",
+            "spanish": "alfombra"
+          },
+          {
+            "english": "closet",
+            "spanish": "ropero"
+          },
+          {
+            "english": "balcony",
+            "spanish": "balcón"
+          },
+          {
+            "english": "terrace",
+            "spanish": "terraza"
+          },
+          {
+            "english": "rug",
+            "spanish": "alfombra"
+          },
+          {
+            "english": "bedroom",
+            "spanish": "dormitorio"
+          },
+          {
+            "english": "living room",
+            "spanish": "sala"
+          },
+          {
+            "english": "bathroom",
+            "spanish": "baño"
+          },
+          {
+            "english": "socket",
+            "spanish": "tomacorriente"
+          },
+          {
+            "english": "staircase",
+            "spanish": "escalera"
+          },
+          {
+            "english": "lamp",
+            "spanish": "lámpara"
+          },
+          {
+            "english": "door",
+            "spanish": "puerta"
+          },
+          {
+            "english": "couch",
+            "spanish": "sofá"
+          },
+          {
+            "english": "stove",
+            "spanish": "estufa"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the airport",
+        "data": [
+          {
+            "english": "airplane",
+            "spanish": "avión"
+          },
+          {
+            "english": "flight",
+            "spanish": "vuelo"
+          },
+          {
+            "english": "round trip",
+            "spanish": "ida y vuelta"
+          },
+          {
+            "english": "customs",
+            "spanish": "aduana"
+          },
+          {
+            "english": "coach class",
+            "spanish": "clase turista"
+          },
+          {
+            "english": "first class",
+            "spanish": "primera clase"
+          },
+          {
+            "english": "layover",
+            "spanish": "parada"
+          },
+          {
+            "english": "luggage / baggage",
+            "spanish": "equipaje"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the bank",
+        "data": [
+          {
+            "english": "credit card",
+            "spanish": "tarjeta de crédito"
+          },
+          {
+            "english": "cash",
+            "spanish": "efectivo"
+          },
+          {
+            "english": "currency",
+            "spanish": "moneda"
+          },
+          {
+            "english": "loan",
+            "spanish": "préstamo"
+          },
+          {
+            "english": "bank account",
+            "spanish": "cuenta bancaria"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the bar",
+        "data": [
+          {
+            "english": "counter",
+            "spanish": "mostrador"
+          },
+          {
+            "english": "appetizer",
+            "spanish": "aperitivo"
+          },
+          {
+            "english": "snacks",
+            "spanish": "bocadillos"
+          },
+          {
+            "english": "refreshments",
+            "spanish": "refrescos"
+          },
+          {
+            "english": "pop",
+            "spanish": "sodas"
+          },
+          {
+            "english": "spirits",
+            "spanish": "licores"
+          },
+          {
+            "english": "rum",
+            "spanish": "ron"
+          },
+          {
+            "english": "wine glass",
+            "spanish": "copa"
+          },
+          {
+            "english": "liqueur glass",
+            "spanish": "copita"
+          },
+          {
+            "english": "ice",
+            "spanish": "hielo"
+          },
+          {
+            "english": "draught beer",
+            "spanish": "cerveza de barril"
+          },
+          {
+            "english": "cocktail",
+            "spanish": "cóctel"
+          },
+          {
+            "english": "black coffee",
+            "spanish": "café negro"
+          },
+          {
+            "english": "coffee with cream",
+            "spanish": "café con leche"
+          },
+          {
+            "english": "restroom",
+            "spanish": "baño"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the beach",
+        "data": []
+      },
+      {
+        "subcategory": "At the beauty salon",
+        "data": [
+          {
+            "english": "hairdresser",
+            "spanish": "peluquera"
+          },
+          {
+            "english": "chair",
+            "spanish": "sillón"
+          },
+          {
+            "english": "towel",
+            "spanish": "toalla"
+          },
+          {
+            "english": "mirror",
+            "spanish": "espejo"
+          },
+          {
+            "english": "comb",
+            "spanish": "peine"
+          },
+          {
+            "english": "hair dryer",
+            "spanish": "secador de cabello"
+          },
+          {
+            "english": "scissors",
+            "spanish": "tijeras"
+          },
+          {
+            "english": "hair brush",
+            "spanish": "cepillo"
+          },
+          {
+            "english": "razor",
+            "spanish": "navaja"
+          },
+          {
+            "english": "soap",
+            "spanish": "jabón"
+          },
+          {
+            "english": "hair clipper",
+            "spanish": "máquina de cortar el cabello"
+          },
+          {
+            "english": "braid",
+            "spanish": "trenza"
+          },
+          {
+            "english": "wig",
+            "spanish": "peluca"
+          },
+          {
+            "english": "hairlock",
+            "spanish": "rizo"
+          },
+          {
+            "english": "frinze",
+            "spanish": "flequillo"
+          },
+          {
+            "english": "wave",
+            "spanish": "onda"
+          },
+          {
+            "english": "permanent",
+            "spanish": "permanente"
+          },
+          {
+            "english": "to dye your hair blond",
+            "spanish": "teñirse de rubio"
+          },
+          {
+            "english": "blond",
+            "spanish": "rubio"
+          },
+          {
+            "english": "blonde",
+            "spanish": "rubia"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the bookstore",
+        "data": [
+          {
+            "english": "bookstall",
+            "spanish": "librero"
+          },
+          {
+            "english": "pen",
+            "spanish": "bolígrafo"
+          },
+          {
+            "english": "eraser",
+            "spanish": "goma de borrar"
+          },
+          {
+            "english": "pencil",
+            "spanish": "lápiz"
+          },
+          {
+            "english": "marker",
+            "spanish": "marcador"
+          },
+          {
+            "english": "notebook",
+            "spanish": "cuaderno"
+          },
+          {
+            "english": "dictionary",
+            "spanish": "diccionario"
+          },
+          {
+            "english": "edition",
+            "spanish": "edición"
+          },
+          {
+            "english": "author",
+            "spanish": "autor"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the downtown",
+        "data": [
+          {
+            "english": "taxi",
+            "spanish": "taxi"
+          },
+          {
+            "english": "garbage collector",
+            "spanish": "recolector de basura"
+          },
+          {
+            "english": "buildings",
+            "spanish": "edificios"
+          },
+          {
+            "english": "gas station",
+            "spanish": "gasolineria"
+          },
+          {
+            "english": "bus station",
+            "spanish": "estación de buses"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the drugstore",
+        "data": [
+          {
+            "english": "cotton",
+            "spanish": "algodón"
+          },
+          {
+            "english": "antibiotic",
+            "spanish": "antibiótico"
+          },
+          {
+            "english": "first-aid kit",
+            "spanish": "botiquín de primeros auxilios"
+          },
+          {
+            "english": "disinfectant",
+            "spanish": "desinfectante"
+          },
+          {
+            "english": "dose",
+            "spanish": "dosis"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the gym",
+        "data": [
+          {
+            "english": "sit-ups",
+            "spanish": "abdominales"
+          },
+          {
+            "english": "aerobic exercise",
+            "spanish": "ejercicio aeróbico"
+          },
+          {
+            "english": "regular exercise",
+            "spanish": "ejercicio periódico"
+          },
+          {
+            "english": "to stretch",
+            "spanish": "estirar"
+          },
+          {
+            "english": "to be in shape",
+            "spanish": "estar en forma"
+          },
+          {
+            "english": "to bend",
+            "spanish": "flexionar"
+          },
+          {
+            "english": "strength",
+            "spanish": "fuerza"
+          },
+          {
+            "english": "to work out",
+            "spanish": "hacer gymnasia"
+          },
+          {
+            "english": "to lift weights",
+            "spanish": "levantar pesas"
+          },
+          {
+            "english": "sweat",
+            "spanish": "sudor"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the hardware store",
+        "data": [
+          {
+            "english": "drill",
+            "spanish": "taladro"
+          },
+          {
+            "english": "paint brush",
+            "spanish": "brocha"
+          },
+          {
+            "english": "bolt",
+            "spanish": "tuerca"
+          },
+          {
+            "english": "wire",
+            "spanish": "cable"
+          },
+          {
+            "english": "tool box",
+            "spanish": "caja de herramientas"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the hotel",
+        "data": [
+          {
+            "english": "reservation",
+            "spanish": "reserva"
+          },
+          {
+            "english": "reception",
+            "spanish": "recepción"
+          },
+          {
+            "english": "vacancies",
+            "spanish": "habitaciones libres"
+          },
+          {
+            "english": "no vacancy",
+            "spanish": "completo"
+          },
+          {
+            "english": "lobby",
+            "spanish": "vestíbulo"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the mall",
+        "data": [
+          {
+            "english": "store",
+            "spanish": "tienda"
+          },
+          {
+            "english": "cinema",
+            "spanish": "cine"
+          },
+          {
+            "english": "building",
+            "spanish": "edificio"
+          },
+          {
+            "english": "go shopping",
+            "spanish": "ir de compras"
+          },
+          {
+            "english": "elevator",
+            "spanish": "ascensor"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the restaurant",
+        "data": [
+          {
+            "english": "chef",
+            "spanish": "cocinero"
+          },
+          {
+            "english": "waiter",
+            "spanish": "camarero"
+          },
+          {
+            "english": "waitress",
+            "spanish": "camarera"
+          },
+          {
+            "english": "kitchen",
+            "spanish": "cocina"
+          },
+          {
+            "english": "table",
+            "spanish": "mesa"
+          },
+          {
+            "english": "order",
+            "spanish": "orden"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the school",
+        "data": [
+          {
+            "english": "teacher",
+            "spanish": "maestro"
+          },
+          {
+            "english": "classroom",
+            "spanish": "aula"
+          },
+          {
+            "english": "classmate",
+            "spanish": "compañero"
+          },
+          {
+            "english": "homework",
+            "spanish": "tarea"
+          },
+          {
+            "english": "presentation",
+            "spanish": "presentación"
+          }
+        ]
+      },
+      {
+        "subcategory": "At the supermarket",
+        "data": []
+      },
+      {
+        "subcategory": "At the workplace",
+        "data": []
+      }
+    ]
+  },
+  {
+    "category": "Products & Things",
+    "data": [
+      {
+        "subcategory": "Appliances",
+        "data": [
+          {
+            "english": "food processor",
+            "spanish": "procesador de comida"
+          },
+          {
+            "english": "pressure cooker",
+            "spanish": "olla de presión"
+          },
+          {
+            "english": "blender",
+            "spanish": "licuadora"
+          },
+          {
+            "english": "fan",
+            "spanish": "ventilador"
+          },
+          {
+            "english": "dishwasher",
+            "spanish": "lavavajillas"
+          }
+        ]
+      },
+      {
+        "subcategory": "Containers",
+        "data": [
+          {
+            "english": "spray",
+            "spanish": "atomizador"
+          },
+          {
+            "english": "bar",
+            "spanish": "barra"
+          },
+          {
+            "english": "bag",
+            "spanish": "bolsa"
+          },
+          {
+            "english": "sack",
+            "spanish": "saco"
+          },
+          {
+            "english": "bottle",
+            "spanish": "botella"
+          },
+          {
+            "english": "box",
+            "spanish": "caja"
+          },
+          {
+            "english": "carton",
+            "spanish": "cartón"
+          },
+          {
+            "english": "can",
+            "spanish": "lata"
+          },
+          {
+            "english": "package",
+            "spanish": "paquete"
+          },
+          {
+            "english": "six-pack",
+            "spanish": "paquete de seis"
+          }
+        ]
+      },
+      {
+        "subcategory": "Electronic",
+        "data": [
+          {
+            "english": "computer",
+            "spanish": "computadora"
+          },
+          {
+            "english": "speakers",
+            "spanish": "parlantes"
+          },
+          {
+            "english": "hard drive",
+            "spanish": "disco duro"
+          },
+          {
+            "english": "headphones",
+            "spanish": "audifonos"
+          },
+          {
+            "english": "video card",
+            "spanish": "tarjeta de video"
+          }
+        ]
+      },
+      {
+        "subcategory": "Everyday products",
+        "data": []
+      },
+      {
+        "subcategory": "Furniture",
+        "data": []
+      },
+      {
+        "subcategory": "Materials",
+        "data": [
+          {
+            "english": "acetate",
+            "spanish": "acetato"
+          },
+          {
+            "english": "cotton",
+            "spanish": "algodón"
+          },
+          {
+            "english": "leather",
+            "spanish": "cuero"
+          },
+          {
+            "english": "acrilic fiber",
+            "spanish": "fibra acrílica"
+          },
+          {
+            "english": "suede",
+            "spanish": "gamuza"
+          },
+          {
+            "english": "gauze",
+            "spanish": "gasa"
+          },
+          {
+            "english": "wool",
+            "spanish": "lana"
+          },
+          {
+            "english": "nylon",
+            "spanish": "nylon"
+          },
+          {
+            "english": "polyester",
+            "spanish": "poliéster"
+          },
+          {
+            "english": "printed silk",
+            "spanish": "seda estampada"
+          },
+          {
+            "english": "natural silk",
+            "spanish": "seda natural"
+          }
+        ]
+      },
+      {
+        "subcategory": "Music",
+        "data": [
+          {
+            "english": "accordion",
+            "spanish": "acordeón"
+          },
+          {
+            "english": "harp",
+            "spanish": "arpa"
+          },
+          {
+            "english": "drums",
+            "spanish": "batería"
+          },
+          {
+            "english": "clarinet",
+            "spanish": "clarinete"
+          },
+          {
+            "english": "bass",
+            "spanish": "contrabajo"
+          },
+          {
+            "english": "bassoon",
+            "spanish": "fagot"
+          },
+          {
+            "english": "flute",
+            "spanish": "flauta"
+          },
+          {
+            "english": "guitar",
+            "spanish": "guitarra"
+          },
+          {
+            "english": "oboe",
+            "spanish": "oboe"
+          },
+          {
+            "english": "saxophone",
+            "spanish": "saxofón"
+          },
+          {
+            "english": "kettle drums",
+            "spanish": "timbales"
+          },
+          {
+            "english": "trumpet",
+            "spanish": "trompeta"
+          },
+          {
+            "english": "violin",
+            "spanish": "violín"
+          },
+          {
+            "english": "cello",
+            "spanish": "violoncelo"
+          },
+          {
+            "english": "vibraphone",
+            "spanish": "vibráfono"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Technicalities & Tools",
+    "data": [
+      {
+        "subcategory": "Business & Sales",
+        "data": []
+      },
+      {
+        "subcategory": "Electricity & Electronic",
+        "data": [
+          {
+            "english": "wire",
+            "spanish": "alambre"
+          },
+          {
+            "english": "multimeter",
+            "spanish": "multímetro"
+          },
+          {
+            "english": "welding",
+            "spanish": "soldadura"
+          },
+          {
+            "english": "current",
+            "spanish": "corriente"
+          },
+          {
+            "english": "voltage",
+            "spanish": "voltaje"
+          }
+        ]
+      },
+      {
+        "subcategory": "Farm machinery",
+        "data": []
+      },
+      {
+        "subcategory": "Law",
+        "data": []
+      },
+      {
+        "subcategory": "Math & Physics",
+        "data": []
+      },
+      {
+        "subcategory": "Mechanics",
+        "data": []
+      },
+      {
+        "subcategory": "Science",
+        "data": []
+      }
+    ]
+  }
+]

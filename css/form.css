@@ -1,0 +1,33 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+body {
+  background: #263238;
+}
+
+.input-field input[type=text]:focus + label,
+.input-field input[type=password]:focus + label {
+  color: #3F51B5;
+}
+
+.input-field input[type=text],
+.input-field input[type=password],
+.input-field .materialize-textarea {
+  border-bottom: 1px solid #3F51B5;
+  box-shadow: 0 1px 0 0 #3F51B5;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid #283593;
+  box-shadow: 0 1px 0 0 #283593;
+}
+
+input[type=submit] {
+  width: 100%;
+}

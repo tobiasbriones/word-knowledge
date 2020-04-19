@@ -1,0 +1,77 @@
+/*
+ * Copyright (c) 2015 Tobias Briones
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD 3-Clause license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+@media screen and (min-width: 600px) {
+  .wk-search {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 5% 10% 0 10%;
+    margin: 5% 0 0 0;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .wk-results .row {
+    width: 100%;
+    margin: 5% 0;
+  }
+  
+  .wk-results i {
+    display: none;
+  }
+  
+  .lc {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+  }
+  
+  .lc-image {
+    display: block;
+    width: 100%;
+  }
+  
+  .lc-image:before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
+  
+  .lc button {
+    position: relative;
+    width: 100%;
+    margin-top: 8%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .wk-results .row {
+    width: 70%;
+    margin: 5% 0;
+  }
+  
+  .wk-results i {
+    position: absolute;
+    display: block;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    font-size: 12px;
+    line-height: 100%;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.54);
+  }
+  
+  .lc button {
+    width: 60%;
+    left: 40%;
+  }
+}
