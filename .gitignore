@@ -1,2 +1,5 @@
 # Server side storage
 backend/storage/users/
+
+# PHPStorm
+.idea/
