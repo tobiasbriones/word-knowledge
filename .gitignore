@@ -3,3 +3,5 @@ backend/storage/users/
 
 # PHPStorm
 .idea/
+
+/vendor/

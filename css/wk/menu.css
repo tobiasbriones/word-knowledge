@@ -19,6 +19,7 @@
 .toolbar-menu {
   width: 100%;
   height: 150px;
+  padding: 8px 16px;
   z-index: 1;
   transition: transform 400ms;
   -webkit-transform: translateY(-100%);
@@ -110,7 +111,7 @@
 
 @media screen and (min-width: 800px) {
   .toolbar-menu {
-    height: 110px;
+    height: 220px;
   }
   
   .menu-item {
@@ -136,10 +137,6 @@
 }
 
 @media screen and (min-width: 1080px) {
-  .toolbar-menu {
-    height: 110px;
-  }
-  
   .menu-item {
     padding: 1%;
   }

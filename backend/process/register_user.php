@@ -10,7 +10,7 @@
 require "../src/databases/UsersDB.php";
 require "../src/ValidatorManager.php";
 require "../src/UserManager.php";
-require "../libs/php5/password_compat-1.0.4/password.php";
+
 pre();
 
 $user = $_POST["user"];

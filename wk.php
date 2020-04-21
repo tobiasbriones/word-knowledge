@@ -41,6 +41,7 @@ setcookie("lc", $category->id, time() + (60 * 60 * 24 * 7 * 4 * 12));
   
   <head>
     <title>Word Knowledge</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="libs/materialize/css/materialize.min.css" media="screen, projection">
     <link rel="stylesheet" type="text/css" href="css/default.css">
@@ -77,13 +78,17 @@ setcookie("lc", $category->id, time() + (60 * 60 * 24 * 7 * 4 * 12));
             </div>
             
             <div class="row">
-              <p class="checkbox">
-                <input id="mode_game" class="filled-in" type="checkbox" data-group="mode_study" />
-                <label for="mode_game">Game</label>
+              <p>
+                <label>
+                  <input id="mode_game" type="checkbox" class="filled-in" data-group="mode_study">
+                  <span>Game</span>
+                </label>
               </p>
-              <p class="checkbox">
-                <input id="mode_study" class="filled-in" type="checkbox" data-group="mode_game" />
-                <label for="mode_study">Study</label>
+              <p>
+                <label>
+                  <input id="mode_study" type="checkbox" class="filled-in" data-group="mode_game">
+                  <span>Study</span>
+                </label>
               </p>
             </div>
           </div>
@@ -93,13 +98,17 @@ setcookie("lc", $category->id, time() + (60 * 60 * 24 * 7 * 4 * 12));
               <span>Order</span>
             </div>
             <div class="row">
-              <p class="checkbox">
-                <input id="order_impartial" class="filled-in" type="checkbox" data-group="order_subcategories" />
-                <label for="order_impartial">Impartial</label>
+              <p>
+                <label>
+                  <input id="order_impartial" type="checkbox" class="filled-in" data-group="order_subcategories">
+                  <span>Impartial</span>
+                </label>
               </p>
-              <p class="checkbox">
-                <input id="order_subcategories" class="filled-in" type="checkbox" data-group="order_impartial" />
-                <label for="order_subcategories">Subcategories</label>
+              <p>
+                <label>
+                  <input id="order_subcategories"  type="checkbox" class="filled-in" data-group="order_impartial">
+                  <span>Subcategories</span>
+                </label>
               </p>
             </div>
           </div>
@@ -126,14 +135,10 @@ setcookie("lc", $category->id, time() + (60 * 60 * 24 * 7 * 4 * 12));
         </div>
       </div>
     </div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-      window.jQuery || document.write('<script src="libs/jquery-dist-2.1.4/jquery.min.js"><\/script>');
-    </script>
+  
+    <script src="libs/jquery-dist-3.5.0/jquery.min.js"></script>
     <script src="libs/materialize/js/materialize.min.js"></script>
-    <script src="libs/js-cookie-2.0.3/js.cookie-2.0.3.min.js"></script>
-    <script src="libs/jquery.nicescroll-3.5.6/jquery.nicescroll.min.js"></script>
+    <script src="libs/js-cookie-2.2.1/js.cookie-2.2.1.min.js"></script>
     <script src="js/wk.js"></script>
   
   </body>

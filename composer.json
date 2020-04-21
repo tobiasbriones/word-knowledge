@@ -1,0 +1,13 @@
+{
+    "name": "tobias-briones/word-knowledge",
+    "description": "Web app to play word games and practice foreign languages",
+    "type": "project",
+    "license": "BSD 3-Clause",
+    "authors": [
+        {
+            "name": "Tobias Briones",
+            "email": "tobiasbrionesdev@gmail.com"
+        }
+    ],
+    "require": {}
+}

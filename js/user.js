@@ -10,7 +10,7 @@ let container = null;
 let isMsgPaneOpen = false;
 let isSmallSize = false;
 
-$(document).on('ready', onReady);
+$(document).ready(onReady);
 $(window).on('resize', onResize);
 
 function getReceiver() {

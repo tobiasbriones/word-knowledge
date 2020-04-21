@@ -9,7 +9,6 @@
 
 require "../src/databases/UsersDB.php";
 require "../src/UserManager.php";
-require "../libs/php5/password_compat-1.0.4/password.php";
 
 if (!isset($_POST["send"]) || !isset($_POST["user"]) || !isset($_POST["password"])) {
   redirect("../login.php");

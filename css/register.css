@@ -7,9 +7,13 @@
  */
 
 form {
-  margin: 2% 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 32px 0 !important;
+}
+
+#form-parent {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 #avatar {

@@ -48,10 +48,12 @@
               <label for="password">Password</label>
             </div>
           </div>
-          
+  
           <p>
-            <input class="filled-in" type="checkbox" id="remember" name="remember" checked="checked">
-            <label for="remember">Remember</label>
+            <label>
+              <input id="remember" name="remember" type="checkbox" class="filled-in" checked="checked">
+              <span>Remember</span>
+            </label>
           </p>
           
           <input class="btn blue darken-4" type="submit" name="send" value="log in">

@@ -8,7 +8,7 @@
 
 const uiManager = new UIManager();
 
-$(document).on('ready', onReady);
+$(document).ready(onReady);
 
 // ------------------------------  CALLBACKS  ------------------------------- //
 function onReady() {

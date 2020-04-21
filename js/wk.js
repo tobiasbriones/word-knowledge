@@ -9,7 +9,7 @@
 const uiManager = new UIManager();
 let category = -1;
 
-$(document).on('ready', onReady);
+$(document).ready(onReady);
 $(window).on('resize', onResize);
 $(window).on('beforeunload', onBeforeUnload);
 

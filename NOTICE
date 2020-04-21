@@ -61,17 +61,22 @@ available under the Apache 2.0 License (https://www.apache.org/licenses/LICENSE-
 --------------------------------------------------------------------------------
 
 
-This project includes the password_compat library (MIT-Licensed)
- * Copyright (c) 2012 Anthony Ferrara.
-
 This project includes the jQuery library (MIT-Licensed)
- * Copyright (c) 2005, 2015 jQuery Foundation, Inc.
- 
-This project includes the jquery.nicescroll library (MIT-Licensed)
- * Copyright (c) 2011 InuYaksa.
+ * Copyright (c) JS Foundation and other contributors, https://js.foundation/.
 
 This project includes the JavaScript Cookie library (MIT-Licensed)
- * Copyright (c) 2014 Klaus Hartl.
+ * Copyright (c) 2018 Klaus Hartl, Fagner Brack, GitHub Contributors.
  
 This project includes the Materialize library (MIT-Licensed)
- * Copyright (c) 2014-2015 Materialize.
+ * Copyright (c) 2014-2018 Materialize.
+
+--------------------------------------------------------------------------------
+-- 							DYNAMICALLY REQUIRED							  --
+--------------------------------------------------------------------------------
+
+
+- Roboto font (Apache 2.0-Licensed),
+see https://fonts.google.com/specimen/Roboto
+
+- Material icons (Apache 2.0-Licensed),
+see https://google.github.io/material-design-icons/#getting-icons

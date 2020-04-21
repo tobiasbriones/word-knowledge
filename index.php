@@ -53,6 +53,7 @@ catch (PDOException $e) {
   
   <head>
     <title>Word Knowledge</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="libs/materialize/css/materialize.min.css" media="screen, projection">
     <link rel="stylesheet" type="text/css" href="css/default.css">
@@ -171,12 +172,9 @@ catch (PDOException $e) {
       </div>
     </div>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-      window.jQuery || document.write('<script src="libs/jquery-dist-2.1.4/jquery.min.js"><\/script>');
-    </script>
+    <script src="libs/jquery-dist-3.5.0/jquery.min.js"></script>
     <script src="libs/materialize/js/materialize.min.js"></script>
-    <script src="libs/js-cookie-2.0.3/js.cookie-2.0.3.min.js"></script>
+    <script src="libs/js-cookie-2.2.1/js.cookie-2.2.1.min.js"></script>
     <script src="js/index.js"></script>
   
   </body>
