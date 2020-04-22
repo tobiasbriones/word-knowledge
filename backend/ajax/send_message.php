@@ -7,29 +7,29 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/databases/UsersDB.php";
+require "../src/database/UsersDB.php";
 require "../src/UserManager.php";
-require "../src/object/User.php";
+require "../src/model/User.php";
 
 if (!isset($_POST["msg"]) || !isset($_POST["receiver"])) {
-  exit();
+    exit();
 }
 
 $rec = $_POST["receiver"];
 $msg = $_POST["msg"];
 
 try {
-  $conn = UsersDB::newInstance();
-  $senderId = UserManager::retriveUserId();
-  $recId = User::findUserByName($conn, $rec)->id;
-  
-  if ($senderId == UserManager::NO_USER || $recId == null) {
-    exit();
-  }
-  UserManager::sendMessage($conn, $senderId, $recId, $msg);
-  $conn = null;
+    $conn = UsersDB::newInstance();
+    $senderId = UserManager::retrieveUserId();
+    $recId = User::findUserByName($conn, $rec)->id;
+    
+    if ($senderId == UserManager::NO_USER || $recId == null) {
+        exit();
+    }
+    UserManager::sendMessage($conn, $senderId, $recId, $msg);
+    $conn = null;
 }
 catch (PDOException $e) {
-  echo "Failed to send";
-  exit();
+    echo "Failed to send";
+    exit();
 }

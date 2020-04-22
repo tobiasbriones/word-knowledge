@@ -7,8 +7,8 @@
   -->
 
 <?php
-require "backend/src/databases/UsersDB.php";
-require "backend/src/object/User.php";
+require "backend/src/database/UsersDB.php";
+require "backend/src/model/User.php";
 require "backend/src/UserManager.php";
 
 $user = null;
@@ -21,7 +21,7 @@ try {
     session_start();
     
     $user = User::findUserByName($conn, $_GET["user"]);
-    $luId = UserManager::retriveUserId();
+    $luId = UserManager::retrieveUserId();
     
     if ($user == null || !$user->userExists) {
       printUDNE();
@@ -53,7 +53,7 @@ try {
   }
   else {
     $isLocalUser = true;
-    $user = UserManager::retriveUser($conn);
+    $user = UserManager::retrieveUser($conn);
     
     if ($user == null || !$user->userExists) {
       header("Location: login.php");

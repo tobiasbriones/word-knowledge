@@ -7,37 +7,37 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/databases/WKDataDB.php";
-require "../src/object/wk/Category.php";
+require "../src/database/WKDataDB.php";
+require "../src/model/wk/Category.php";
 
 $categories = array();
 $lc = null;
 
 try {
-  $conn = WKDataDB::newInstance();
-  
-  for ($i = 1; $i < 10; $i++) {
-    $categories[] = new Category($conn, $i, false);
-  }
-  $conn = null;
+    $conn = WKDataDB::newInstance();
+    
+    for ($i = 1; $i < 10; $i++) {
+        $categories[] = new Category($conn, $i, false);
+    }
+    $conn = null;
 }
 catch (PDOException $e) {
-  echo "<p class='white-text'><strong>Failed to load</strong></p>";
+    echo "<p class='white-text'><strong>Failed to load</strong></p>";
 }
 
 if (isset($_COOKIE["lc"])) {
-  $id = ((integer) $_COOKIE["lc"]) - 1;
-  $lc = $categories[$id];
+    $id = ((integer) $_COOKIE["lc"]) - 1;
+    $lc = $categories[$id];
 }
 
 function cell($id, $title, $image) {
-  $cell = "
+    $cell = "
     <div class='cat-cell' data-cat='$id' style='background: url($image); background-size: 100% 100%;'>
       <div class='cat-title'>
         <span>$title</span>
       </div>
 		</div>";
-  echo $cell;
+    echo $cell;
 }
 
 ?>
@@ -55,33 +55,35 @@ function cell($id, $title, $image) {
     
     <div class="wk-results"></div>
   </div>
-  
-  <?php if ($lc != null) { ?>
-    <div class="card-panel grey darken-4 lc">
-      <div class="lc-image" style="background-image: url(<?php echo $lc->image; ?>); background-size: 100% 100%;"></div>
-      <button id="continue" class="btn blue darken-4" data-cat="<?php echo $lc->id; ?>">
-        continue
-      </button>
-    </div>
-    <?php
-  }
-  else {
-    $length = count($categories) - 1;
-    $lc = $categories[rand(0, $length)]; ?>
     
-    <div class="card-panel grey darken-4 lc">
-      <div class="lc-image" style="background-image: url(<?php echo $lc->image; ?>); background-size: 100% 100%;"></div>
-      <button id="continue" class="btn blue darken-4" data-cat="<?php echo $lc->id; ?>">maybe</button>
-    </div>
-  <?php } ?>
+    <?php if ($lc != null) { ?>
+      <div class="card-panel grey darken-4 lc">
+        <div class="lc-image"
+             style="background-image: url(<?php echo $lc->image; ?>); background-size: 100% 100%;"></div>
+        <button id="continue" class="btn blue darken-4" data-cat="<?php echo $lc->id; ?>">
+          continue
+        </button>
+      </div>
+        <?php
+    }
+    else {
+        $length = count($categories) - 1;
+        $lc = $categories[rand(0, $length)]; ?>
+      
+      <div class="card-panel grey darken-4 lc">
+        <div class="lc-image"
+             style="background-image: url(<?php echo $lc->image; ?>); background-size: 100% 100%;"></div>
+        <button id="continue" class="btn blue darken-4" data-cat="<?php echo $lc->id; ?>">maybe</button>
+      </div>
+    <?php } ?>
 </aside>
 
 <div class="content">
   <div class="categories">
-    <?php
-    foreach ($categories as $category) {
-      cell($category->id, $category->name, $category->image);
-    }
-    ?>
+      <?php
+      foreach ($categories as $category) {
+          cell($category->id, $category->name, $category->image);
+      }
+      ?>
   </div>
 </div>

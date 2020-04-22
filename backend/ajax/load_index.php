@@ -8,15 +8,15 @@
  */
 
 if (
-  !isset($_POST["user"])
-  || !isset($_POST["score"])
-  || !isset($_POST["sgc"])
-  || !isset($_POST["nm"])
-  || !is_numeric($_POST["score"])
-  || !is_numeric($_POST["sgc"])
-  || !is_numeric($_POST["nm"])
+    !isset($_POST["user"])
+    || !isset($_POST["score"])
+    || !isset($_POST["sgc"])
+    || !isset($_POST["nm"])
+    || !is_numeric($_POST["score"])
+    || !is_numeric($_POST["sgc"])
+    || !is_numeric($_POST["nm"])
 ) {
-  exit();
+    exit();
 }
 
 header("Content-Type: text/html;charset=utf-8");
@@ -26,8 +26,8 @@ $sgc = $_POST["sgc"];
 $nm = $_POST["nm"];
 
 function printUserPanel() {
-  global $score, $sgc, $nm;
-  ?>
+    global $score, $sgc, $nm;
+    ?>
   <div class="card-panel score">
     <span class="center inverse-text">
       <?php echo $score; ?>
@@ -48,7 +48,7 @@ function printUserPanel() {
       </span>
     </div>
   </div>
-  <?php
+    <?php
 }
 
 function printHeyReg() {
@@ -58,19 +58,19 @@ function printHeyReg() {
   <p>It's fast and easy and you'll be able to participate, save data and more</p>
   
   <div>
-    <?php
-    }
-    ?>
+      <?php
+      }
+      ?>
     <aside>
       <div class="card-panel grey darken-4 user-panel">
-        <?php
-        if ($user != null) {
-          printUserPanel();
-        }
-        else {
-          printHeyReg();
-        }
-        ?>
+          <?php
+          if ($user != null) {
+              printUserPanel();
+          }
+          else {
+              printHeyReg();
+          }
+          ?>
       </div>
       <div class="card-panel blue-grey darken-4 something">
       </div>

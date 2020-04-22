@@ -7,8 +7,8 @@
   -->
 
 <?php
-require "backend/src/databases/UsersDB.php";
-require "backend/src/object/User.php";
+require "backend/src/database/UsersDB.php";
+require "backend/src/model/User.php";
 require "backend/src/UserManager.php";
 
 $userName = null;
@@ -17,7 +17,7 @@ $userSGCPoints = -1;
 $userNM = -1;
 
 try {
-  $userId = UserManager::retriveUserId();
+  $userId = UserManager::retrieveUserId();
   
   if ($userId != UserManager::NO_USER) {
     $conn = UsersDB::newInstance();

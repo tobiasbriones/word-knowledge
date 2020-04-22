@@ -7,28 +7,28 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../../src/databases/UsersDB.php";
+require "../../src/database/UsersDB.php";
 require "../../src/UserManager.php";
 require "../../src/WKUserManager.php";
 
 if (!isset($_POST["category"]) || !isset($_POST["cps"]) || !is_numeric($_POST["category"])) {
-  exit();
+    exit();
 }
 
 $category = $_POST["category"];
 $cps = $_POST["cps"];
 
 try {
-  $userId = UserManager::retriveUserId();
-  
-  if ($userId == UserManager::NO_USER) {
-    exit();
-  }
-  $conn = UsersDB::newInstance();
-  
-  WKUserManager::saveProgress($conn, $userId, $category, $cps);
-  $conn = null;
+    $userId = UserManager::retrieveUserId();
+    
+    if ($userId == UserManager::NO_USER) {
+        exit();
+    }
+    $conn = UsersDB::newInstance();
+    
+    WKUserManager::saveProgress($conn, $userId, $category, $cps);
+    $conn = null;
 }
 catch (PDOException $e) {
-  exit();
+    exit();
 }

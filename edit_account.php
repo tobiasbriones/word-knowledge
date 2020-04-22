@@ -7,15 +7,15 @@
   -->
 
 <?php
-require "backend/src/databases/UsersDB.php";
-require "backend/src/object/User.php";
+require "backend/src/database/UsersDB.php";
+require "backend/src/model/User.php";
 require "backend/src/UserManager.php";
 
 $user = null;
 
 try {
   $conn = UsersDB::newInstance();
-  $user = UserManager::retriveUser($conn);
+  $user = UserManager::retrieveUser($conn);
   
   if ($user == null || !$user->userExists) {
     header("Location: login.php");

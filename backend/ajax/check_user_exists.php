@@ -7,29 +7,29 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/databases/UsersDB.php";
+require "../src/database/UsersDB.php";
 require "../src/ValidatorManager.php";
 
 if (!isset($_POST["user"])) {
-  exit();
+    exit();
 }
 
 header("Content-type: text/html; charset=utf-8");
 $user = $_POST["user"];
 
 try {
-  $conn = UsersDB::newInstance();
-  $exists = ValidatorManager::exists($conn, $user);
-  
-  if ($exists) {
-    echo "true";
-  }
-  else {
-    echo "false";
-  }
-  $conn = null;
+    $conn = UsersDB::newInstance();
+    $exists = ValidatorManager::exists($conn, $user);
+    
+    if ($exists) {
+        echo "true";
+    }
+    else {
+        echo "false";
+    }
+    $conn = null;
 }
 catch (PDOException $e) {
-  echo "Error when connecting";
-  exit();
+    echo "Error when connecting";
+    exit();
 }

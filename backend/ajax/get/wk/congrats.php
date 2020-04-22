@@ -7,34 +7,34 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../../../src/databases/UsersDB.php";
+require "../../../src/database/UsersDB.php";
 require "../../../src/UserManager.php";
 require "../../../src/WKUserManager.php";
 
 if (!isset($_POST["category"]) || !is_numeric($_POST["category"])) {
-  exit();
+    exit();
 }
 
 $category = $_POST["category"];
 
 try {
-  $conn = UsersDB::newInstance();
-  $userId = UserManager::retriveUserId();
-  
-  if ($userId == UserManager::NO_USER) {
-    exit();
-  }
-  $progress = WKUserManager::getProgress($conn, $userId, $category);
-  $prg = $progress["progress"];
-  
-  if ($prg == 0) {
-    $prg = 1;
-  }
-  $percent = $progress["score"] / $prg;
+    $conn = UsersDB::newInstance();
+    $userId = UserManager::retrieveUserId();
+    
+    if ($userId == UserManager::NO_USER) {
+        exit();
+    }
+    $progress = WKUserManager::getProgress($conn, $userId, $category);
+    $prg = $progress["progress"];
+    
+    if ($prg == 0) {
+        $prg = 1;
+    }
+    $percent = $progress["score"] / $prg;
 }
 catch (PDOException $e) {
-  echo "Failed to connect";
-  exit();
+    echo "Failed to connect";
+    exit();
 }
 ?>
 

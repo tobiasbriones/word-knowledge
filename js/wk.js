@@ -37,6 +37,7 @@ function loadData() {
   const request = $.post('backend/ajax/get/wk/data.php', params);
   
   request.done(function(data) {
+    console.log(data);
     uiManager.onLoadData(data);
   });
 }

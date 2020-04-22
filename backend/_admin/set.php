@@ -13,16 +13,16 @@ require "../src/object/wk/Category.php";
 $categories = array();
 
 try {
-  $conn = WKDataDB::newInstance();
-  
-  for ($i = 1; $i < 10; $i++) {
-    $categories[] = new Category($conn, $i, false);
-  }
-  $conn = null;
+    $conn = WKDataDB::newInstance();
+    
+    for ($i = 1; $i < 10; $i++) {
+        $categories[] = new Category($conn, $i, false);
+    }
+    $conn = null;
 }
 catch (PDOException $e) {
-  echo "error <br>$e";
-  exit();
+    echo "error <br>$e";
+    exit();
 }
 ?>
 
@@ -42,11 +42,11 @@ catch (PDOException $e) {
     
     <div class="categories">
       <ul>
-        <?php
-        foreach ($categories as $category) {
-          echo "<li data-cat='$category->id'><span class='center'>$category->name</span></li>";
-        }
-        ?>
+          <?php
+          foreach ($categories as $category) {
+              echo "<li data-cat='$category->id'><span class='center'>$category->name</span></li>";
+          }
+          ?>
       </ul>
     </div>
     

@@ -27,18 +27,18 @@
         <form id="form"
               class="col s12 m7 l6"
               enctype="multipart/form-data"
-              action="backend/process/register_user.php"
+              action="backend/api/user/create.php"
               method="post">
-    
+          
           <div class="row">
             <div class="input-field col s12">
-              <input class="white-text" id="user" name="user" type="text" length="25" />
+              <input class="white-text" id="user" name="user" type="text" length="25">
               <label for="user">
                 User
               </label>
             </div>
           </div>
-    
+          
           <div class="row">
             <div class="file-field input-field col s12">
               <input class="file-path white-text" id="avatar" type="text" />
@@ -51,7 +51,7 @@
               </div>
             </div>
           </div>
-    
+          
           <div class="row">
             <div class="input-field col s12">
               <input class="white-text" type="password" id="password" name="password" />
@@ -59,9 +59,9 @@
                 Password
               </label>
             </div>
-    
+          
           </div>
-    
+          
           <div class="row">
             <div class="input-field col s12">
               <input class="white-text" type="password" id="confirm_password" name="confirm_password">
@@ -70,7 +70,7 @@
               </label>
             </div>
           </div>
-    
+          
           <div class="row">
             <div class="input-field col s12">
 						<textarea id="information"
@@ -83,13 +83,13 @@
               </label>
             </div>
           </div>
-    
+          
           <div class="row">
             <div class="input-field col s12">
               <input class="btn cyan darken-4" type="submit" name="send" value="Register" />
             </div>
           </div>
-  
+        
         </form>
       </div>
       
