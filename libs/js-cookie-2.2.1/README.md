@@ -126,7 +126,7 @@ Cookies.remove('name', { path: '', domain: '.yourdomain.com' });
 If there is any danger of a conflict with the namespace `Cookies`, the `noConflict` method will allow you to define a new namespace and preserve the original one. This is especially useful when running the script on third party sites e.g. as part of a widget or SDK.
 
 ```javascript
-// Assign the js-cookie api to a different variable and restore the original "window.Cookies"
+// Assign the js-cookie Api to a different variable and restore the original "window.Cookies"
 var Cookies2 = Cookies.noConflict();
 Cookies2.set('name', 'value');
 ```

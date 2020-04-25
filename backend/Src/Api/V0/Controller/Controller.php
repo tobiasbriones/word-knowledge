@@ -7,6 +7,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+namespace App\Api\V0\Controller;
+
 abstract class Controller {
     
     private $db;
@@ -21,8 +23,8 @@ abstract class Controller {
     }
     
     /**
-     * @return object the database connection
-     * @throws Exception if the database is not initialized
+     * @return object the Database connection
+     * @throws Exception if the Database is not initialized
      */
     protected final function getDatabase() {
         if ($this->db == null) throw new Exception("Database is not initialized");

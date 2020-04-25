@@ -7,8 +7,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/database/UsersDB.php";
-require "../src/ValidatorManager.php";
+require "../Src/Database/UsersDB.php";
+require "../Src/ValidatorManager.php";
 
 if (!isset($_POST["user"])) {
     exit();

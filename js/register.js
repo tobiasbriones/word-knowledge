@@ -163,7 +163,7 @@ function paragraph(text) {
  - Trim
  - At least 2 characters length
  - Maximum of 25 characteres
- - Not exists in the database
+ - Not exists in the Database
  
  Password must be:
  - At least 6 characters lenght

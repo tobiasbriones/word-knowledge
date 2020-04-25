@@ -7,11 +7,11 @@
   -->
 
 <?php
-require "backend/src/database/WKDataDB.php";
-require "backend/src/model/wk/Category.php";
+require "backend/Src/Database/WKDataDB.php";
+require "backend/Src/Model/WK/Category.php";
 
 if (!isset($_GET["c"])) {
-  header("Location: index.php?go=wk");
+  header("Location: index.php?go=WK");
   exit();
 }
 

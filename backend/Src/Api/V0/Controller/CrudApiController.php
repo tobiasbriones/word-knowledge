@@ -7,10 +7,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+namespace App\Api\v0\Controller;
+
 interface CrudApiController {
     
     /**
-     * Creates a new record into the database.
+     * Creates a new record into the Database.
      *
      * @param object $object object to be created
      * @param array  $params associative array with other required options, null
@@ -21,7 +23,7 @@ interface CrudApiController {
     public function create($object, $params = null);
     
     /**
-     * Returns the object fetch from the database with the specified id. If the
+     * Returns the object fetch from the Database with the specified id. If the
      * "id" param is not set, then returns an array of all of the records.
      *
      * @param int $id id for item to read
@@ -41,7 +43,7 @@ interface CrudApiController {
     public function update($id, $object, $params = null);
     
     /**
-     * @param int $id Deletes the record from the database with the specified id.
+     * @param int $id Deletes the record from the Database with the specified id.
      *
      * @return mixed
      */

@@ -7,7 +7,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require_once "Model.php";
+namespace App\Model;
+
+use Exception;
 
 class User extends Model {
     

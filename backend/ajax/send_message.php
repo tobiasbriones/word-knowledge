@@ -7,9 +7,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/database/UsersDB.php";
-require "../src/UserManager.php";
-require "../src/model/User.php";
+require "../Src/Database/UsersDB.php";
+require "../Src/UserManager.php";
+require "../Src/Model/User.php";
 
 if (!isset($_POST["msg"]) || !isset($_POST["receiver"])) {
     exit();

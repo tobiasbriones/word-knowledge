@@ -7,6 +7,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+namespace App;
+
 class UserManager {
     
     const NO_USER = -1;

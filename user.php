@@ -7,9 +7,9 @@
   -->
 
 <?php
-require "backend/src/database/UsersDB.php";
-require "backend/src/model/User.php";
-require "backend/src/UserManager.php";
+require "backend/Src/Database/UsersDB.php";
+require "backend/Src/Model/User.php";
+require "backend/Src/UserManager.php";
 
 $user = null;
 $isLocalUser = false;
@@ -134,7 +134,7 @@ function printUDNE() {
         <div class="col s12 m7">
           <div class="card-panel cyan darken-4">
             <?php
-            echo "<img class='avatar' src='$user->avatar'/>";
+            echo "<img class='avatar' Src='$user->avatar'/>";
             echo "<span class='user'>$user->getName()<span>";
             ?>
           </div>

@@ -7,7 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/UserManager.php";
+require "../Src/UserManager.php";
 
 UserManager::logOut();
 header("Location: ../../index.php");

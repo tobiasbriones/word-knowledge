@@ -7,6 +7,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+namespace App\Model;
+
 interface VarType {
     const VAR_TYPE_INT = 0;
     const VAR_TYPE_POSITIVE_INT = 1;

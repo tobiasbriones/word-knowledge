@@ -7,8 +7,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/databases/WKDataDB.php";
-require "../src/object/wk/Category.php";
+require "../Src/databases/WKDataDB.php";
+require "../Src/object/WK/Category.php";
 
 $categoryId = $_POST['cat'];
 $added = array();

@@ -7,9 +7,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../../src/ValidatorManager.php";
-require "../../src/UserManager.php";
-require "../../src/api/v0/controller/UserController.php";
+require_once "../../../vendor/autoload.php";
+
+require "../../Src/ValidatorManager.php";
+require "../../Src/UserManager.php";
+
+use App\Model\User;
+use App\Database\UsersDB;
+use App\Api\V0\Controller\UserController;
 
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
@@ -18,12 +23,12 @@ header("Access-Control-Max-Age: 600");
 header("Content-Type: application/json; charset=UTF-8");
 
 // Yes, writing variables with underscore here because I've realized about some philosophies about the coding styles ...
-// It's because this file doesn't belong to src/, it's just for scripting
+// It's because this file doesn't belong to Src/, it's just for scripting
 $request_method = $_SERVER["REQUEST_METHOD"];
 
 // Use the users db for now
-require "../../src/database/UsersDB.php";
-require "../../src/model/User.php";
+require "../../Src/Database/UsersDB.php";
+require "../../Src/Model/User.php";
 
 switch ($request_method) {
     case "GET":
@@ -116,7 +121,7 @@ function check_params() {
  * Returns the user object with the specified client's input.
  *
  * @return User the user object with the specified client's input
- * @throws Exception if the user model rejects the client's input
+ * @throws Exception if the user Model rejects the client's input
  */
 function get_model() {
     $name = $_POST["name"];

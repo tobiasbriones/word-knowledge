@@ -7,8 +7,8 @@
   -->
 
 <?php
-require "../src/databases/WKDataDB.php";
-require "../src/object/wk/Category.php";
+require "../Src/databases/WKDataDB.php";
+require "../Src/object/WK/Category.php";
 
 $categories = array();
 

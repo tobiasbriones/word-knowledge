@@ -7,7 +7,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require_once "VarType.php";
+namespace App\Model;
+
+use Exception;
 
 class Model implements VarType {
     
@@ -18,7 +20,7 @@ class Model implements VarType {
      * id param is not set which is set to -1 by default.
      *
      * @param int $id user id, it must be non-negative and only -1 when the user
-     *                does not exists in the database
+     *                does not exists in the Database
      *
      * @throws Exception if the passed user id is not a non-negative integer
      * number and it is not -1

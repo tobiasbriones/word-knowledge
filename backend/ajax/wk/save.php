@@ -7,9 +7,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../../src/database/UsersDB.php";
-require "../../src/UserManager.php";
-require "../../src/WKUserManager.php";
+require "../../Src/Database/UsersDB.php";
+require "../../Src/UserManager.php";
+require "../../Src/WKUserManager.php";
 
 if (!isset($_POST["category"]) || !isset($_POST["cps"]) || !is_numeric($_POST["category"])) {
     exit();

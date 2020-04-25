@@ -7,11 +7,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../../../src/database/UsersDB.php";
-require "../../../src/database/WKDataDB.php";
-require "../../../src/model/wk/Category.php";
-require "../../../src/UserManager.php";
-require "../../../src/WKUserManager.php";
+require "../../../Src/Database/UsersDB.php";
+require "../../../Src/Database/WKDataDB.php";
+require "../../../Src/Model/WK/Category.php";
+require "../../../Src/UserManager.php";
+require "../../../Src/WKUserManager.php";
 
 if (!isset($_POST["category"]) || !is_numeric($_POST["category"])) {
     exit();

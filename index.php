@@ -7,9 +7,12 @@
   -->
 
 <?php
-require "backend/src/database/UsersDB.php";
-require "backend/src/model/User.php";
-require "backend/src/UserManager.php";
+require_once "vendor/autoload.php";
+require "backend/Src/Database/UsersDB.php";
+require "backend/Src/UserManager.php";
+
+use App\UserManager;
+use App\Database\UsersDB;
 
 $userName = null;
 $userScore = -1;

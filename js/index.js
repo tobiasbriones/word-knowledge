@@ -20,8 +20,8 @@ function onLoad(mainPage, wkPage) {
   const place = getUrlParameter('go');
   
   uiManager.setPages(mainPage, wkPage);
-  if (place === 'wk') {
-    $('#mi-wk').triggerHandler('click');
+  if (place === 'WK') {
+    $('#mi-WK').triggerHandler('click');
   }
   else {
     $('#mi-main').triggerHandler('click');
@@ -115,7 +115,7 @@ function UIManager() {
         pageManager = context.mainPageManager;
         break;
       
-      case 'mi-wk':
+      case 'mi-WK':
         pageManager = context.wkPageManager;
         break;
       
@@ -130,15 +130,15 @@ function UIManager() {
     const brand = context.toolbar.find('.brand-logo');
     let url = 'index.php';
     
-    if (pageName === 'wk') {
-      url += '?go=wk';
+    if (pageName === 'WK') {
+      url += '?go=WK';
       icon.removeClass('app-icon');
-      icon.addClass('wk-icon');
+      icon.addClass('WK-icon');
       brand.text('Word Knowledge');
       
     }
     else {
-      icon.removeClass('wk-icon');
+      icon.removeClass('WK-icon');
       icon.addClass('app-icon');
       brand.text('Main');
     }
@@ -237,7 +237,7 @@ function WKPageManager(wkPage, container) {
   };
   
   function onCategory(category) {
-    window.location.href = 'wk.php?c=' + category;
+    window.location.href = 'WK.php?c=' + category;
   }
   
   function onSearch(search) {
@@ -281,7 +281,7 @@ function MainPage() {
 
 function WKPage() {
   
-  this.name = 'wk';
+  this.name = 'WK';
   this.html = null;
   this.container = null;
   this.onCategory = null;
@@ -301,7 +301,7 @@ function WKPage() {
   };
   
   this.setSearch = function(results) {
-    const resultsPane = this.container.find('.wk-results');
+    const resultsPane = this.container.find('.WK-results');
     
     resultsPane.html('');
     if (results == null) {

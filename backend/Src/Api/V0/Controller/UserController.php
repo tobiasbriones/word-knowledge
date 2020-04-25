@@ -7,10 +7,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+namespace App\Api\V0\Controller;
+
 require_once "Controller.php";
 require_once "CrudApiController.php";
 
 require_once __DIR__ . "/../../../UserManager.php";
+
+use Exception;
+use PDO;
+use App\UserManager;
 
 class UserController extends Controller implements CrudApiController {
     

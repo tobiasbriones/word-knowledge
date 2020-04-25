@@ -7,9 +7,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/databases/UsersDB.php";
-require "../src/ValidatorManager.php";
-require "../src/UserManager.php";
+require "../Src/databases/UsersDB.php";
+require "../Src/ValidatorManager.php";
+require "../Src/UserManager.php";
 
 set_time_limit(100000);
 $user = "Boot";

@@ -7,7 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/databases/WKDataDB.php";
+require "../Src/databases/WKDataDB.php";
 
 $file = fopen("categories.json", "r");
 $content = "";

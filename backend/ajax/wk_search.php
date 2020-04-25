@@ -7,7 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/database/WKDataDB.php";
+require "../Src/Database/WKDataDB.php";
 
 if (!isset($_POST["word"])) {
     exit();

@@ -7,9 +7,9 @@
   -->
 
 <?php
-require "backend/src/database/UsersDB.php";
-require "backend/src/model/User.php";
-require "backend/src/UserManager.php";
+require "backend/Src/Database/UsersDB.php";
+require "backend/Src/Model/User.php";
+require "backend/Src/UserManager.php";
 
 $user = null;
 

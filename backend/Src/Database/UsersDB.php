@@ -7,7 +7,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require_once "Config.php";
+namespace App\Database;
+
+use PDO;
 
 class UsersDB {
     

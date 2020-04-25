@@ -7,6 +7,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+namespace App\Database;
+
 class Config {
     
     const PORT = 3308;

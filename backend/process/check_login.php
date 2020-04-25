@@ -7,8 +7,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/database/UsersDB.php";
-require "../src/UserManager.php";
+require "../Src/Database/UsersDB.php";
+require "../Src/UserManager.php";
 
 if (!isset($_POST["send"]) || !isset($_POST["user"]) || !isset($_POST["password"])) {
     redirect("../login.php");

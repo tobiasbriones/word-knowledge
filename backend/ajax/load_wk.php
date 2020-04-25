@@ -7,8 +7,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../src/database/WKDataDB.php";
-require "../src/model/wk/Category.php";
+require_once "../../vendor/autoload.php";
+require "../Src/Database/WKDataDB.php";
+require "../Src/Model/WK/Category.php";
+use App\Database\WKDataDB;
 
 $categories = array();
 $lc = null;
