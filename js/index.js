@@ -20,8 +20,8 @@ function onLoad(mainPage, wkPage) {
   const place = getUrlParameter('go');
   
   uiManager.setPages(mainPage, wkPage);
-  if (place === 'WK') {
-    $('#mi-WK').triggerHandler('click');
+  if (place === 'wk') {
+    $('#mi-wk').triggerHandler('click');
   }
   else {
     $('#mi-main').triggerHandler('click');
@@ -40,6 +40,7 @@ function loadPages() {
     
     mainPage.html = indexHTML;
     wkRequest.done(function(wkHTML) {
+      console.log(wkHTML);
       wkPage.html = wkHTML;
       onLoad(mainPage, wkPage);
     });
@@ -115,10 +116,9 @@ function UIManager() {
         pageManager = context.mainPageManager;
         break;
       
-      case 'mi-WK':
+      case 'mi-wk':
         pageManager = context.wkPageManager;
         break;
-      
     }
     setPage(pageManager);
   }
@@ -130,15 +130,15 @@ function UIManager() {
     const brand = context.toolbar.find('.brand-logo');
     let url = 'index.php';
     
-    if (pageName === 'WK') {
-      url += '?go=WK';
+    if (pageName === 'wk') {
+      url += '?go=wk';
       icon.removeClass('app-icon');
-      icon.addClass('WK-icon');
+      icon.addClass('wk-icon');
       brand.text('Word Knowledge');
       
     }
     else {
-      icon.removeClass('WK-icon');
+      icon.removeClass('wk-icon');
       icon.addClass('app-icon');
       brand.text('Main');
     }
@@ -237,7 +237,7 @@ function WKPageManager(wkPage, container) {
   };
   
   function onCategory(category) {
-    window.location.href = 'WK.php?c=' + category;
+    window.location.href = 'wk.php?c=' + category;
   }
   
   function onSearch(search) {
@@ -281,7 +281,7 @@ function MainPage() {
 
 function WKPage() {
   
-  this.name = 'WK';
+  this.name = 'wk';
   this.html = null;
   this.container = null;
   this.onCategory = null;
@@ -301,7 +301,7 @@ function WKPage() {
   };
   
   this.setSearch = function(results) {
-    const resultsPane = this.container.find('.WK-results');
+    const resultsPane = this.container.find('.wk-results');
     
     resultsPane.html('');
     if (results == null) {

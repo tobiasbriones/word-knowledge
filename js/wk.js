@@ -34,7 +34,7 @@ function onBeforeUnload() {
 // ------------------------------  FUNCTIONS  ------------------------------- //
 function loadData() {
   const params = { 'category': category };
-  const request = $.post('backend/ajax/get/WK/data.php', params);
+  const request = $.post('backend/ajax/get/wk/data.php', params);
   
   request.done(function(data) {
     console.log(data);
@@ -160,7 +160,7 @@ function UIManager() {
   
   function onFinish() {
     const params = { 'category': context.categoryId };
-    const request = $.post('backend/ajax/get/WK/congrats.php', params);
+    const request = $.post('backend/ajax/get/wk/congrats.php', params);
     
     request.done(function(congratsHTML) {
       const gameContainer = context.content.gameContainer;
@@ -168,7 +168,7 @@ function UIManager() {
       gameContainer.html(congratsHTML);
       gameContainer.find('.cgt-opts button').click(function() {
         const params = { 'category': context.categoryId };
-        const request = $.post('backend/ajax/WK/reset.php', params);
+        const request = $.post('backend/ajax/wk/reset.php', params);
         
         request.done(function() {
           window.location.reload();
@@ -499,7 +499,7 @@ function PairsHandler(uiManager) {
     $.ajax(
       {
         type: 'POST',
-        url: 'ajax/WK/save.php',
+        url: 'ajax/wk/save.php',
         data: params,
         async: false
       }
@@ -592,7 +592,7 @@ function PairsHandler(uiManager) {
   
   function sendCPS(callback) {
     const params = { 'category': this.categoryId, 'cps': cps };
-    const request = $.post('backend/ajax/WK/save.php', params);
+    const request = $.post('backend/ajax/wk/save.php', params);
     
     request.done(function() {
       callback();

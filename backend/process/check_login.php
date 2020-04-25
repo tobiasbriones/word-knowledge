@@ -7,6 +7,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+require_once "../../vendor/autoload.php";
+
+use App\Database\UsersDB;
+use App\UserManager;
+
 require "../Src/Database/UsersDB.php";
 require "../Src/UserManager.php";
 

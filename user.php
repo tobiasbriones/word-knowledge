@@ -7,9 +7,10 @@
   -->
 
 <?php
-require "backend/Src/Database/UsersDB.php";
-require "backend/Src/Model/User.php";
-require "backend/Src/UserManager.php";
+require "vendor/autoload.php";
+
+use App\Database\UsersDB;
+use App\UserManager;
 
 $user = null;
 $isLocalUser = false;
@@ -61,7 +62,7 @@ try {
     }
   }
 }
-catch (PDOException $e) {
+catch (Exception $e) {
   echo "There were problems to connect<br>";
   exit();
 }
@@ -134,7 +135,7 @@ function printUDNE() {
         <div class="col s12 m7">
           <div class="card-panel cyan darken-4">
             <?php
-            echo "<img class='avatar' Src='$user->avatar'/>";
+            echo "<img class='avatar' src='$user->getImage()'/>";
             echo "<span class='user'>$user->getName()<span>";
             ?>
           </div>
@@ -153,7 +154,9 @@ function printUDNE() {
         <div class="col s12 m7">
           <div class="card-panel grey darken-3">
             <?php
-            $inf = (empty($user->getInformation())) ? "<i>No information about $user->user</i>" : $user->getInformation();
+            $user_name = $user->getName();
+            $inf = (empty($user->getInformation())) ? "<i>No information about $user_name</i>" :
+                $user->getInformation();
             echo "<p>$inf</p>";
             ?>
           </div>

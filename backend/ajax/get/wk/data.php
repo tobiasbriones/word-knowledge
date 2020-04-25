@@ -7,17 +7,18 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../../../Src/Database/UsersDB.php";
-require "../../../Src/Database/WKDataDB.php";
-require "../../../Src/Model/WK/Category.php";
-require "../../../Src/UserManager.php";
-require "../../../Src/WKUserManager.php";
+require "../../../../vendor/autoload.php";
+
+use App\Database\UsersDB;
+use App\Database\WKDataDB;
+use App\UserManager;
+use App\Model\WK\Category;
 
 if (!isset($_POST["category"]) || !is_numeric($_POST["category"])) {
     exit();
 }
 
-$categoryId = $_POST["category"];
+$categoryId = (int) $_POST["category"];
 $response = array();
 $userCPS = null;
 $category = null;
@@ -28,25 +29,27 @@ try {
     $userId = UserManager::retrieveUserId();
     $category = new Category($wkConn, $categoryId);
     
-    if (!$category->exists) {
-        exit();
-    }
+//    if (!$category->exists) {
+//        exit();
+//    }
     $wkConn = null;
-    
-    if ($userId != UserManager::NO_USER) {
-        $userCPS = WKUserManager::getCheckPoints($userConn, $userId, $category->id);
-    }
-    else {
-        $userCPS = array();
-    }
+//
+//    if ($userId != UserManager::NO_USER) {
+//        $userCPS = WKUserManager::getCheckPoints($userConn, $userId, $category->getId());
+//    }
+//    else {
+//        $userCPS = array();
+//    }
+    $userCPS = array();
     $userConn = null;
 }
-catch (PDOException $e) {
+catch (Exception $e) {
+    echo $e;
     exit();
 }
 $response["game"] = array(
-    "pairs" => $category->pairs,
-    "subcategories" => $category->subcategories,
+    "pairs" => $category->getPairs(),
+    "subcategories" => $category->getSubcategories(),
     "cps" => $userCPS
 );
 $response["study"] = getStudyHTML();
@@ -59,11 +62,11 @@ function getStudyHTML() {
     $pairs = array();
     $html = "";
     
-    foreach ($category->subcategories as $subcategory) {
+    foreach ($category->getSubcategories() as $subcategory) {
         $pairs[$subcategory] = array();
     }
     
-    foreach ($category->pairs as $pair) {
+    foreach ($category->getPairs() as $pair) {
         $pairs[$pair["subcategory"]][] = $pair;
     }
     

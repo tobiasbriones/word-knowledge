@@ -7,24 +7,64 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-class Pair {
+namespace App\Model\WK;
+
+use App\Model\Model;
+
+// Temporal Pair
+class Pair extends Model {
     
-    private $id;
     private $english;
     private $spanish;
     private $subcategory;
     
     public function __construct($id = -1) {
-        $this->id = $id;
+        parent::__construct($id);
+        $this->english = "";
+        $this->spanish = "";
+        $this->subcategory = "";
     }
     
-    public function __get($field) {
-        return $this->$field;
+    /**
+     * @param mixed $english
+     */
+    public function setEnglish($english) {
+        $this->english = $english;
     }
     
-    public function __set($field, $value) {
-        $this->$field = $value;
-        return $this;
+    /**
+     * @param mixed $spanish
+     */
+    public function setSpanish($spanish) {
+        $this->spanish = $spanish;
+    }
+    
+    /**
+     * @param mixed $subcategory
+     */
+    public function setSubcategory($subcategory) {
+        $this->subcategory = $subcategory;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getEnglish() {
+        return $this->english;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getSpanish() {
+        return $this->spanish;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getSubcategory() {
+        return $this->subcategory;
     }
     
 }

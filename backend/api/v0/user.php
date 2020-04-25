@@ -9,12 +9,9 @@
 
 require_once "../../../vendor/autoload.php";
 
-require "../../Src/ValidatorManager.php";
-require "../../Src/UserManager.php";
-
-use App\Model\User;
-use App\Database\UsersDB;
 use App\Api\V0\Controller\UserController;
+use App\Database\UsersDB;
+use App\Model\User;
 
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
@@ -26,12 +23,9 @@ header("Content-Type: application/json; charset=UTF-8");
 // It's because this file doesn't belong to Src/, it's just for scripting
 $request_method = $_SERVER["REQUEST_METHOD"];
 
-// Use the users db for now
-require "../../Src/Database/UsersDB.php";
-require "../../Src/Model/User.php";
-
 switch ($request_method) {
     case "GET":
+        read();
         break;
     case "POST":
         create();
@@ -44,15 +38,106 @@ switch ($request_method) {
 
 // Old temporal code for controlling the requests
 
-function create() {
-    $new_user = null;
+function read() {
+    function check_input() {
+        $params_set = true;
+        $params_set &= isset($_GET["id"]);
+        
+        if (!$params_set) {
+            $msg = "Wrong arguments or number of arguments. Check the API documentation";
+            throw new Exception($msg);
+        }
+        return true;
+    }
+    
+    function check_params() {
+        if (!is_numeric($_GET["id"]) || !is_int((int) $_GET["id"]) || $_GET["id"] < 0) {
+            $msg = "The user id is a non-negative integer number";
+            throw new Exception($msg);
+        }
+        return true;
+    }
+    
+    try {
+        check_input();
+        check_params();
+    }
+    catch (Exception $e) {
+        error($e->getMessage(), 400);
+        return;
+    }
+    $user_id = (int) $_GET["id"];
+    $user_controller = new UserController(UsersDB::newInstance());
+    
+    try {
+        $user = $user_controller->read($user_id);
+    }
+    catch (Exception $e) {
+        error($e->getMessage(), 500);
+        return;
+    }
+    send($user);
+}
 
+function create() {
+    /**
+     * Checks for the client input whether the required params have been set.
+     *
+     * @return bool <code>true</code> if and only if the required params are set
+     *              from the client's input
+     * @throws Exception if the required params are not set
+     */
+    function check_input() {
+        $params_set = true;
+        $params_set &= isset($_POST["name"]);
+        $params_set &= isset($_POST["password"]);
+        $params_set &= isset($_POST["confirm_password"]);
+        
+        if (!$params_set) {
+            $msg = "Wrong arguments or number of arguments. Check the API documentation";
+            throw new Exception($msg);
+        }
+        return true;
+    }
+    
+    /**
+     * Returns <code>true</code> if and only if the params are valid.
+     *
+     * @return bool <code>true</code> if and only if the params are valid
+     * @throws Exception if any of the params are wrong
+     */
+    function check_params() {
+        if ($_POST["password"] !== $_POST["confirm_password"]) {
+            $msg = "Passwords do not match";
+            throw new Exception($msg);
+        }
+        return true;
+    }
+    
+    /**
+     * Returns the user object with the specified client's input.
+     *
+     * @return User the user object with the specified client's input
+     * @throws Exception if the user Model rejects the client's input
+     */
+    function get_model() {
+        $name = $_POST["name"];
+        $information = $_POST["information"];
+        $user = new User();
+        
+        $user->setName($name);
+        $user->setInformation($information);
+        return $user;
+    }
+    
+    $new_user = null;
+    
     try {
         check_input();
         check_params();
         $new_user = get_model();
     }
-    catch(Exception $e) {
+    catch (Exception $e) {
         error($e->getMessage(), 400);
         return;
     }
@@ -72,65 +157,14 @@ function create() {
         "hashed_password" => $hashed_password
     ];
     $user_controller = new UserController(UsersDB::newInstance());
-
+    
     //$avatarUploaded = $_FILES["avatar"]["tmp_name"];
     try {
         $user_controller->create($new_user, $params);
     }
-    catch(Exception $e) {
-    
+    catch (Exception $e) {
     }
     send(["message" => "Ok"]);
-}
-
-/**
- * Checks for the client input whether the required params have been set.
- *
- * @return bool <code>true</code> if and only if the required params are set
- *              from the client's input
- * @throws Exception if the required params are not set
- */
-function check_input() {
-    $params_set = true;
-    $params_set &= isset($_POST["name"]);
-    $params_set &= isset($_POST["password"]);
-    $params_set &= isset($_POST["confirm_password"]);
-    
-    if (!$params_set) {
-        $msg = "Wrong arguments or number of arguments. Check the API documentation";
-        throw new Exception($msg);
-    }
-    return true;
-}
-
-/**
- * Returns <code>true</code> if and only if the params are valid.
- *
- * @return bool <code>true</code> if and only if the params are valid
- * @throws Exception if any of the params are wrong
- */
-function check_params() {
-    if ($_POST["password"] !== $_POST["confirm_password"]) {
-        $msg = "Passwords do not match";
-        throw new Exception($msg);
-    }
-    return true;
-}
-
-/**
- * Returns the user object with the specified client's input.
- *
- * @return User the user object with the specified client's input
- * @throws Exception if the user Model rejects the client's input
- */
-function get_model() {
-    $name = $_POST["name"];
-    $information = $_POST["information"];
-    $user = new User();
-
-    $user->setName($name);
-    $user->setInformation($information);
-    return $user;
 }
 
 /**
@@ -148,7 +182,7 @@ function send($response) {
  *
  * @param $msg           string message to send as a response
  * @param $response_code int HTTP response code
- * @param $about array list of the names of the params related to this error
+ * @param $about         array list of the names of the params related to this error
  */
 function error($msg, $response_code, $about = []) {
     http_response_code($response_code);

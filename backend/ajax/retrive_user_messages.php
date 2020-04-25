@@ -7,8 +7,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../Src/Database/UsersDB.php";
-require "../Src/UserManager.php";
+require_once "../../vendor/autoload.php";
+
+use App\Database\UsersDB;
+use App\UserManager;
 
 $conversations = array();
 
@@ -25,7 +27,7 @@ try {
     if ($userId == UserManager::NO_USER) {
         exit();
     }
-    $result = $conn->query(sql);
+    $result = $conn->query($sql);
     $rows = $result->fetchAll();
     
     foreach ($rows as $messageObj) {

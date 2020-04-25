@@ -14,10 +14,11 @@ require_once "CrudApiController.php";
 
 require_once __DIR__ . "/../../../UserManager.php";
 
-use Exception;
-use PDO;
+use App\Model\User;
 use App\UserManager;
+use Exception;
 
+// Most of this implementation is temporal
 class UserController extends Controller implements CrudApiController {
     
     public function __construct($db) {
@@ -59,7 +60,7 @@ class UserController extends Controller implements CrudApiController {
             $userStorageFolder = dirname(dirname(dirname(dirname(__DIR__)))) . "/storage/users/";
             $userFolderName = $userId . bin2hex($object->getName());
             $userFolder = $userStorageFolder . $userFolderName;
-
+            
             if (!mkdir($userFolder)) {
                 throw new Exception("Error Processing Request");
             }
@@ -83,7 +84,22 @@ class UserController extends Controller implements CrudApiController {
      * @inheritDoc
      */
     public function read($id = -1) {
-        // TODO: Implement read() method.
+        try {
+            $db = $this->getDatabase();
+            $ps = $db->prepare("SELECT user AS name, information from register WHERE user_id = ?");
+            $ps->execute([$id]);
+            $userResult = $ps->fetch();
+    
+            $user = new User($id);
+    
+            $user->setName($userResult["name"]);
+            $user->setInformation($userResult["information"]);
+            return $user;
+        }
+        catch (Exception $e) {
+            echo "Couldn't read $e";
+            exit();
+        }
     }
     
     /**

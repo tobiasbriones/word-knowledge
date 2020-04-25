@@ -10,8 +10,9 @@
 namespace App\Model;
 
 use Exception;
+use JsonSerializable;
 
-class User extends Model {
+class User extends Model implements JsonSerializable {
     
     const DEF_SCORE = 0;
     private $name;
@@ -162,6 +163,18 @@ class User extends Model {
             throw new Exception($failMsg);
         }
         return true;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function jsonSerialize() {
+        return [
+            "id" => $this->getId(),
+            "name" => $this->getName(),
+            "information" => $this->getInformation(),
+            "score" => $this->getScore()
+        ];
     }
     
 }

@@ -7,6 +7,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+require_once "../../vendor/autoload.php";
+
+use App\Database\WKDataDB;
+
 require "../Src/Database/WKDataDB.php";
 
 if (!isset($_POST["word"])) {

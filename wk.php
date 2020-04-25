@@ -7,8 +7,10 @@
   -->
 
 <?php
-require "backend/Src/Database/WKDataDB.php";
-require "backend/Src/Model/WK/Category.php";
+require_once "vendor/autoload.php";
+
+use App\Database\WKDataDB;
+use App\Model\WK\Category;
 
 if (!isset($_GET["c"])) {
   header("Location: index.php?go=WK");
@@ -20,20 +22,16 @@ $category = null;
 // -------------------- CONNECT -------------------- //
 try {
   $wkConn = WKDataDB::newInstance();
-  $category = new Category($wkConn, $_GET["c"], false);
+  $category = new Category($wkConn, (int) $_GET["c"]);
   
-  if (!$category->exists) {
-    echo "Category doesn't exist";
-    exit();
-  }
 }
-catch (PDOException $e) {
+catch (Exception $e) {
   echo "<strong>Failed to connect</strong>";
   exit();
 }
 
 // -------------------- SAVE AS LAST CATEGORY -------------------- //
-setcookie("lc", $category->id, time() + (60 * 60 * 24 * 7 * 4 * 12));
+setcookie("lc", $category->getId(), time() + (60 * 60 * 24 * 7 * 4 * 12));
 ?>
 
 <!doctype html>
@@ -61,7 +59,7 @@ setcookie("lc", $category->id, time() + (60 * 60 * 24 * 7 * 4 * 12));
         <div class="nav-wrapper">
           <a href="index.php?go=wk" class="logo-icon wk-icon"></a>
           <a class="brand-logo hide-on-small-only">
-            <?php echo $category->name; ?>
+            <?php echo $category->getName(); ?>
           </a>
           <ul class="right">
             <li>
@@ -119,7 +117,7 @@ setcookie("lc", $category->id, time() + (60 * 60 * 24 * 7 * 4 * 12));
     <div id="subcategories" class="subcategories z-depth-1">
       <ul>
         <?php
-        foreach ($category->subcategories as $subcategory) {
+        foreach ($category->getSubcategories() as $subcategory) {
           echo "<li class='unselectable' data-sc='$subcategory'><span>$subcategory</span></li>";
         }
         ?>
@@ -127,7 +125,7 @@ setcookie("lc", $category->id, time() + (60 * 60 * 24 * 7 * 4 * 12));
     </div>
     
     <div class="container">
-      <div class="content" data-category="<?php echo $category->id; ?>">
+      <div class="content" data-category="<?php echo $category->getId(); ?>">
         <div class="game">
         </div>
         

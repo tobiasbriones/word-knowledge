@@ -45,7 +45,7 @@ try {
     $conn = null;
   }
 }
-catch (PDOException $e) {
+catch (Exception $e) {
   echo "<p><strong>Failed to connect $e</strong></p>";
   exit();
 }

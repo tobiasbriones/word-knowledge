@@ -8,9 +8,9 @@
  */
 
 require_once "../../vendor/autoload.php";
-require "../Src/Database/WKDataDB.php";
-require "../Src/Model/WK/Category.php";
+
 use App\Database\WKDataDB;
+use App\Model\WK\Category;
 
 $categories = array();
 $lc = null;
@@ -19,11 +19,12 @@ try {
     $conn = WKDataDB::newInstance();
     
     for ($i = 1; $i < 10; $i++) {
-        $categories[] = new Category($conn, $i, false);
+      // This is so wrong jaja
+        $categories[] = new Category($conn, $i);
     }
     $conn = null;
 }
-catch (PDOException $e) {
+catch (Exception $e) {
     echo "<p class='white-text'><strong>Failed to load</strong></p>";
 }
 
@@ -48,7 +49,7 @@ function cell($id, $title, $image) {
   <div class="card-panel wk-search">
     <div class="row">
       <div class="input-field col s12">
-        <input id="word-search" class="inverse-text" type="text" />
+        <input id="word-search" class="inverse-text" type="text" >
         <label for="word-search">
           Search for a word or verb
         </label>
@@ -61,8 +62,8 @@ function cell($id, $title, $image) {
     <?php if ($lc != null) { ?>
       <div class="card-panel grey darken-4 lc">
         <div class="lc-image"
-             style="background-image: url(<?php echo $lc->image; ?>); background-size: 100% 100%;"></div>
-        <button id="continue" class="btn blue darken-4" data-cat="<?php echo $lc->id; ?>">
+             style="background-image: url(<?php echo $lc->getImage(); ?>); background-size: 100% 100%;"></div>
+        <button id="continue" class="btn blue darken-4" data-cat="<?php echo $lc->getId(); ?>">
           continue
         </button>
       </div>
@@ -74,8 +75,8 @@ function cell($id, $title, $image) {
       
       <div class="card-panel grey darken-4 lc">
         <div class="lc-image"
-             style="background-image: url(<?php echo $lc->image; ?>); background-size: 100% 100%;"></div>
-        <button id="continue" class="btn blue darken-4" data-cat="<?php echo $lc->id; ?>">maybe</button>
+             style="background-image: url(<?php echo $lc->getImage(); ?>); background-size: 100% 100%;"></div>
+        <button id="continue" class="btn blue darken-4" data-cat="<?php echo $lc->getId(); ?>">maybe</button>
       </div>
     <?php } ?>
 </aside>
@@ -84,7 +85,7 @@ function cell($id, $title, $image) {
   <div class="categories">
       <?php
       foreach ($categories as $category) {
-          cell($category->id, $category->name, $category->image);
+          cell($category->getId(), $category->getName(), $category->getImage());
       }
       ?>
   </div>

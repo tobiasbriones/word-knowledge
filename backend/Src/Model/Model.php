@@ -26,10 +26,10 @@ class Model implements VarType {
      * number and it is not -1
      */
     public function __construct($id = -1) {
-        if (!(is_int($id) && $id >= -1)) {
+        if (!(Model::isInteger($id) && $id >= -1)) {
             $msg = "
-                The user id must be a non-negative integer number for existing
-                users and -1 (by default) for new users.
+                The id must be a non-negative integer number for existing
+                models and -1 (by default) for new models.
             ";
             throw new Exception($msg);
         }
@@ -45,6 +45,10 @@ class Model implements VarType {
         return $this->id;
     }
     
+    private static function isInteger($var) {
+        return is_numeric($var) && is_int($var);
+    }
+    
     /**
      * Checks whether a variable is of a specified type. If not, then throws an
      * exceptions with the specified failure message.
@@ -58,28 +62,28 @@ class Model implements VarType {
     protected static function checkType($var, $type, $failMsg) {
         switch ($type) {
             case Model::VAR_TYPE_INT:
-                if (!is_int($var)) throw new Exception($failMsg);
+                if (!Model::isInteger($var)) throw new Exception($failMsg);
                 break;
             case Model::VAR_TYPE_POSITIVE_INT:
-                if (!(is_int($var) && $var > 0)) throw new Exception($failMsg);
+                if (!(Model::isInteger($var) && $var > 0)) throw new Exception($failMsg);
                 break;
             case Model::VAR_TYPE_NEGATIVE_INT:
-                if (!(is_int($var) && $var < 0)) throw new Exception($failMsg);
+                if (!(Model::isInteger($var) && $var < 0)) throw new Exception($failMsg);
                 break;
             case Model::VAR_TYPE_NON_NEGATIVE_INT:
-                if (!(is_int($var) && $var >= 0)) throw new Exception($failMsg);
+                if (!(Model::isInteger($var) && $var >= 0)) throw new Exception($failMsg);
                 break;
             case Model::VAR_TYPE_NON_POSITIVE_INT:
-                if (!(is_int($var) && $var <= 0)) throw new Exception($failMsg);
+                if (!(Model::isInteger($var) && $var <= 0)) throw new Exception($failMsg);
                 break;
             case Model::VAR_TYPE_FLOAT:
-                if (!is_float($var)) throw new Exception($failMsg);
+                if (!is_numeric($var) || !is_float($var)) throw new Exception($failMsg);
                 break;
             case Model::VAR_TYPE_DOUBLE:
-                if (!is_double($var)) throw new Exception($failMsg);
+                if (!is_numeric($var) || !is_double($var)) throw new Exception($failMsg);
                 break;
             case Model::VAR_TYPE_LONG:
-                if (!is_long($var)) throw new Exception($failMsg);
+                if (!is_numeric($var) || !is_long($var)) throw new Exception($failMsg);
                 break;
             case Model::VAR_TYPE_BOOL:
                 if (!is_bool($var)) throw new Exception($failMsg);

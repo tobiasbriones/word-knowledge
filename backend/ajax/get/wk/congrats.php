@@ -7,6 +7,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+use App\Database\UsersDB;
+use App\UserManager;
+
 require "../../../Src/Database/UsersDB.php";
 require "../../../Src/UserManager.php";
 require "../../../Src/WKUserManager.php";

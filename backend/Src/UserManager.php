@@ -9,6 +9,8 @@
 
 namespace App;
 
+use App\Api\V0\Controller\UserController;
+
 class UserManager {
     
     const NO_USER = -1;
@@ -46,7 +48,8 @@ class UserManager {
         if ($userId == UserManager::NO_USER) {
             return null;
         }
-        return new User($conn, $userId);
+        $uc = new UserController($conn);
+        return $uc->read($userId);
     }
     
     // -------------------- SET USER DATA -------------------- //
