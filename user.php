@@ -135,7 +135,7 @@ function printUDNE() {
           <div class="card-panel cyan darken-4">
             <?php
             echo "<img class='avatar' src='$user->avatar'/>";
-            echo "<span class='user'>$user->user<span>";
+            echo "<span class='user'>$user->getName()<span>";
             ?>
           </div>
         </div>
@@ -143,7 +143,7 @@ function printUDNE() {
         <div class="col m5 hide-on-small-only">
           <div class="card-panel lime darken-3">
             <?php
-            echo "<span class='score center'>$user->score</span>";
+            echo "<span class='score center'>$user->getScore()</span>";
             ?>
           </div>
         </div>
@@ -153,7 +153,7 @@ function printUDNE() {
         <div class="col s12 m7">
           <div class="card-panel grey darken-3">
             <?php
-            $inf = (empty($user->information)) ? "<i>No information about $user->user</i>" : $user->information;
+            $inf = (empty($user->getInformation())) ? "<i>No information about $user->user</i>" : $user->getInformation();
             echo "<p>$inf</p>";
             ?>
           </div>
@@ -162,7 +162,7 @@ function printUDNE() {
         <div class="col m5 hide-on-small-only">
           <div class="card-panel blue darken-3">
             <?php
-            echo "<span class='sgc-points center'>$user->sgcPoints</span>";
+            echo "<span class='sgc-points center'>$user->getSgcPoints()</span>";
             ?>
           </div>
         </div>
@@ -172,7 +172,7 @@ function printUDNE() {
         <div class="col s8 offset-s2">
           <div class="card-panel lime darken-3">
             <?php
-            echo "<span class='score center'>$user->score</span>";
+            echo "<span class='score center'>$user->getScore()</span>";
             ?>
           </div>
         </div>
@@ -182,7 +182,7 @@ function printUDNE() {
         <div class="col s8 offset-s2">
           <div class="card-panel blue darken-4">
             <?php
-            echo "<span class='sgc-points center'>$user->sgcPoints</span>";
+            echo "<span class='sgc-points center'>$user->getSgcPoints()</span>";
             ?>
           </div>
         </div>

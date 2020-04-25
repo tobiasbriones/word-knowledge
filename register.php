@@ -27,12 +27,12 @@
         <form id="form"
               class="col s12 m7 l6"
               enctype="multipart/form-data"
-              action="backend/api/user/create.php"
+              action="backend/api/v0/user.php"
               method="post">
           
           <div class="row">
             <div class="input-field col s12">
-              <input class="white-text" id="user" name="user" type="text" length="25">
+              <input class="white-text" id="user" name="name" type="text" length="25">
               <label for="user">
                 User
               </label>
