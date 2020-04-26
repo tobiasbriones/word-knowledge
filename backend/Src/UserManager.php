@@ -10,6 +10,7 @@
 namespace App;
 
 use App\Api\V0\Controller\UserController;
+use Exception;
 
 class UserManager {
     
@@ -71,7 +72,7 @@ class UserManager {
         $newMessages = UserManager::getNewMessages($conn, $receiver);
         
         if ($newMessages == null) {
-            throw new PDOException("Error Processing Request", 1);
+            throw new Exception("Error Processing Request", 1);
         }
         
         $sendQuery = "INSERT INTO messages (sender, receiver, message) VALUES (?, ?, ?)";
@@ -104,7 +105,7 @@ class UserManager {
         $newMessages = UserManager::getNewMessages($conn, $userId);
         
         if ($newMessages == null) {
-            throw new PDOException("Error Processing Request", 1);
+            throw new Exception("Error Processing Request", 1);
         }
         $unmArray = json_decode($newMessages, true);
         

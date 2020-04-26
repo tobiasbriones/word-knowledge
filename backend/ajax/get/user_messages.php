@@ -7,8 +7,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require "../../Src/Database/UsersDB.php";
-require "../../Src/UserManager.php";
+require_once "../../../vendor/autoload.php";
+
+use App\Database\UsersDB;
+use App\UserManager;
+
 
 $conversations = array();
 
@@ -40,7 +43,7 @@ try {
         }
     }
 }
-catch (PDOException $e) {
+catch (Exception $e) {
     header("Content-Type: application/json;charset=utf-8");
     echo json_encode([$e]);
     exit();

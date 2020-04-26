@@ -40,7 +40,6 @@ function loadPages() {
     
     mainPage.html = indexHTML;
     wkRequest.done(function(wkHTML) {
-      console.log(wkHTML);
       wkPage.html = wkHTML;
       onLoad(mainPage, wkPage);
     });
