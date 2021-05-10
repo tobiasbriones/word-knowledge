@@ -181,7 +181,7 @@ catch (Exception $e) {
     <script src="libs/jquery-dist-3.5.0/jquery.min.js"></script>
     <script src="libs/materialize/js/materialize.min.js"></script>
     <script src="libs/js-cookie-2.2.1/js.cookie-2.2.1.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js"></script>
 
   </body>
 

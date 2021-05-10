@@ -1,0 +1,11 @@
+{
+  "name": "web",
+  "version": "0.3.0",
+  "description": "Word Knowledge web app",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tobias Briones <tobiasbriones.dev@gmail.com>",
+  "license": "BSD-3-Clause"
+}
