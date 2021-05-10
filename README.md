@@ -1,6 +1,6 @@
 # Word Knowledge
 
-[![License](https://img.shields.io/github/license/TobiasBriones/word-knowledge)](https://github.com/TobiasBriones/word-knowledge/blob/master/LICENSE)
+[![Project GitHub License](https://img.shields.io/github/license/tobiasbriones/word-knowledge.svg?style=flat-square)](https://github.com/tobiasbriones/word-knowledge/blob/main/LICENSE)
 
 App that lets you play word games for fun or practicing languages.
 
