@@ -26,16 +26,16 @@ $password = $_POST["password"];
 try {
     $conn = UsersDB::newInstance();
     $result = $conn->prepare("SELECT user_id, password FROM register WHERE user = ?");
-    
+
     $result->execute(array($user));
     $rows = $result->fetchAll();
-    
+
     if (count($rows) != 1) {
         redirect("../../login.php?w");
         exit();
     }
     $userRow = $rows[0];
-    
+
     if (password_verify($password, $userRow["password"])) {
         if (isset($_POST["remember"])) {
             UserManager::loginUser($userRow["user_id"], true);

@@ -21,7 +21,7 @@ $category = null;
 try {
     $conn = WKDataDB::newInstance();
     $category = new Category($conn, $categoryId, false);
-    
+
     $conn = null;
 }
 catch (PDOException $e) {
@@ -37,12 +37,16 @@ foreach ($category->subcategories as $subcategory) {
     $format = str_replace(" ", "_", $subcategory);
     ?>
   <div class="input-field">
-    <textarea id="<?php echo $subcategory; ?>"
+    <textarea id="<?php
+    echo $subcategory; ?>"
               class="materialize-textarea"
-              name="<?php echo $format; ?>">
+              name="<?php
+              echo $format; ?>">
     </textarea>
-    <label for="<?php echo $subcategory; ?>">
-        <?php echo $subcategory; ?>
+    <label for="<?php
+    echo $subcategory; ?>">
+        <?php
+        echo $subcategory; ?>
     </label>
   </div>
     <?php

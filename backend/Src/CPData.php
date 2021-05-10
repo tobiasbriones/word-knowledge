@@ -10,24 +10,14 @@
 namespace App;
 
 class CPData {
-    
-    private $category;
-    private $pair;
-    private $fails;
-    
-    public function __construct($category, $pair, $fails) {
-        $this->category = $category;
-        $this->pair = $pair;
-        $this->fails = $fails;
-    }
-    
+
     public static function getUserCheckPoints() {
         if (!isset($_SESSION['cps'])) {
             return null;
         }
         $array = array();
         $checkPoints = json_decode($_SESSION['cps'], true);
-        
+
         if ($checkPoints == null) {
             return null;
         }
@@ -37,13 +27,23 @@ class CPData {
         }
         return $array;
     }
-    
+
+    private $category;
+    private $pair;
+    private $fails;
+
+    public function __construct($category, $pair, $fails) {
+        $this->category = $category;
+        $this->pair = $pair;
+        $this->fails = $fails;
+    }
+
     public function getData() {
         return array('category' => $this->category, 'pair' => $this->pair, 'fails' => $this->fails);
     }
-    
+
     public function __get($field) {
         return $this->$field;
     }
-    
+
 }

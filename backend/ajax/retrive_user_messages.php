@@ -23,13 +23,13 @@ try {
     WHERE receiver = '$userId'
        OR sender = '$userId'
   ";
-    
+
     if ($userId == UserManager::NO_USER) {
         exit();
     }
     $result = $conn->query($sql);
     $rows = $result->fetchAll();
-    
+
     foreach ($rows as $messageObj) {
         $senderId = $messageObj["sender"];
         $receiverId = $messageObj["receiver"];
@@ -39,13 +39,17 @@ try {
         $receiver = ($receiverId != $userId) ? getReceiverName($conn, $receiverId) : null;
         $conversationItem = ($sender != null) ? $sender : $receiver;
         $messageType = ($sender != null) ? "input" : "output";
-        
+
         if (!isset($conversations[$conversationItem])) {
             $conversations[$conversationItem] = array();
         }
         $conversationArray = &$conversations[$conversationItem];
-        
-        $conversationArray[] = array("msgType" => $messageType, "date" => $date, "message" => $message);
+
+        $conversationArray[] = array(
+            "msgType" => $messageType,
+            "date" => $date,
+            "message" => $message
+        );
     }
 }
 catch (PDOException $e) {
@@ -58,10 +62,11 @@ function getSenderName($conn, $senderId) {
     if ($senderId == 0) {
         return "SGC Learning";
     }
-    return $conn->query("SELECT user FROM register WHERE user_id = '$senderId'")->fetchAll()[0]["user"];
+    return $conn->query("SELECT user FROM register WHERE user_id = '$senderId'")->fetchAll(
+    )[0]["user"];
 }
 
 function getReceiverName($conn, $receiverId) {
-    return $conn->query("SELECT user FROM register WHERE user_id = '$receiverId'")->fetchAll()[0]["user"];
+    return $conn->query("SELECT user FROM register WHERE user_id = '$receiverId'")->fetchAll(
+    )[0]["user"];
 }
-	

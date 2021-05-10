@@ -70,11 +70,11 @@ body {
     height: 20%;
     min-height: 110px;
   }
-  
+
   .user {
     font-size: 2rem;
   }
-  
+
   .score, .sgc-points {
     font-size: 2.4rem;
   }
@@ -85,16 +85,16 @@ body {
     padding: 5% 0;
     top: 12%;
   }
-  
+
   .container .card-panel {
     height: 20%;
     max-height: 150px;
   }
-  
+
   .edit {
     transform: translate(-200%, -200%);
   }
-  
+
   .msg-panel {
     margin: 5% 10% 0 10%;
   }
@@ -106,15 +106,15 @@ body {
     min-height: 120px;
     max-height: 160px;
   }
-  
+
   .user {
     font-size: 2.4rem;
   }
-  
+
   .score, .sgc-points {
     font-size: 2.6rem;
   }
-  
+
   .msg-panel {
     width: 50%;
     margin: 5% 25% 0 25%;
@@ -125,7 +125,7 @@ body {
   .container {
     top: 6%;
   }
-  
+
   .edit {
     transform: translate(-250%, -200%);
   }
@@ -135,11 +135,11 @@ body {
   body {
     overflow-x: hidden;
   }
-  
+
   .container {
     transition: transform 200ms ease-out;
   }
-  
+
   .msg-panel {
     position: absolute;
     display: block;
@@ -149,10 +149,10 @@ body {
     top: calc(2% + 76px);
     right: 2%;
     z-index: 1;
+    opacity: 0;
     transition: all 200ms ease-out;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
-    opacity: 0;
   }
 }
 
@@ -160,11 +160,11 @@ body {
   .container {
     top: 4%;
   }
-  
+
   .user {
     font-size: 2.6rem;
   }
-  
+
   .score, .sgc-points {
     font-size: 2.8rem;
   }

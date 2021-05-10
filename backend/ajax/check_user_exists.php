@@ -22,7 +22,7 @@ $user = $_POST["user"];
 try {
     $conn = UsersDB::newInstance();
     $exists = ValidatorManager::exists($conn, $user);
-    
+
     if ($exists) {
         echo "true";
     }

@@ -25,22 +25,24 @@ if ($categories_json == null) {
 
 try {
     $conn = WKDataDB::newInstance();
-    
+
     echo "Uploading...<br>";
     foreach ($categories_json as $categoryData) {
         $category = $categoryData["category"];
         $data = $categoryData["data"];
         $id = $conn->query("SELECT id FROM reg WHERE name = '$category'")->fetchAll()[0]["id"];
 
-//echo "<br>Category $category<br>";
+        //echo "<br>Category $category<br>";
         foreach ($data as $scData) {
             $sc = $scData["subcategory"];
-//echo "=> $sc<br>";
+            //echo "=> $sc<br>";
             foreach ($scData["data"] as $pair) {
                 $english = $pair["english"];
                 $spanish = $pair["spanish"];
-//echo "--- ".$pair["english"]." - ".$pair["spanish"]. "<br>";
-                $conn->exec("INSERT INTO cat_$id (english, spanish, subcategory) VALUES ('$english', '$spanish', '$sc')");
+                //echo "--- ".$pair["english"]." - ".$pair["spanish"]. "<br>";
+                $conn->exec(
+                    "INSERT INTO cat_$id (english, spanish, subcategory) VALUES ('$english', '$spanish', '$sc')"
+                );
             }
         }
     }

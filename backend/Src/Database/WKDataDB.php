@@ -12,17 +12,17 @@ namespace App\Database;
 use PDO;
 
 class WKDataDB {
-    
-    const PASSWORD = "";
-    const DATABASE = "wk_data";
-    
+
     public static function newInstance() {
         $dsn = "mysql:host=" . Config::HOST . ";dbname=" . WKDataDB::DATABASE;
         $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
         $conn = new PDO($dsn, Config::ROOT_USER, WKDataDB::PASSWORD, $options);
-        
+
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
     }
-    
+
+    const PASSWORD = "";
+    const DATABASE = "wk_data";
+
 }

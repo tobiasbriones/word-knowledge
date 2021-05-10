@@ -28,32 +28,36 @@ while ($i < 100) {
     try {
         // -------------------- GET CONNECTION AND VALIDATE DATA -------------------- //
         $conn = UsersDB::newInstance();
-        
+
         // -------------------- REGISTER USER -------------------- //
         $catData = getCatData();
-        $result = $conn->prepare("INSERT INTO register (user, password, information) VALUES (?, ?, ?)");
-        
+        $result = $conn->prepare(
+            "INSERT INTO register (user, password, information) VALUES (?, ?, ?)"
+        );
+
         $result->execute(array($user, $hashedPassword, $information));
-        
+
         $result = $conn->query("SELECT LAST_INSERT_ID()");
         $userId = $result->fetchAll()[0]["LAST_INSERT_ID()"];
-        
+
         if ($userId < 1) {
             throw new PDOException("Error Processing Request", 1);
         }
         $conn->exec("INSERT INTO user_data (user_id, new_messages) VALUES ('$userId', '[]')");
-        $conn->exec("INSERT INTO wk_ud (user_id, categories, write_test) VALUES ('$userId', '$catData', '[]')");
-        
+        $conn->exec(
+            "INSERT INTO wk_ud (user_id, categories, write_test) VALUES ('$userId', '$catData', '[]')"
+        );
+
         // -------------------- CONFIG USER -------------------- //
         $userFolder = $userId . bin2hex($user);
         $userFolderAbs = "users/$userFolder";
-        
+
         if (!mkdir($userFolderAbs)) {
             throw new PDOException("Error Processing Request folder", 1);
         }
-        
+
         $msg = "Congrats";
-        
+
         UserManager::sendMessage($conn, 0, $userId, $msg);
     }
     catch (PDOException $e) {

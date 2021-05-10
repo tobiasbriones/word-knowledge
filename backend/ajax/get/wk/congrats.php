@@ -23,13 +23,13 @@ $category = $_POST["category"];
 try {
     $conn = UsersDB::newInstance();
     $userId = UserManager::retrieveUserId();
-    
+
     if ($userId == UserManager::NO_USER) {
         exit();
     }
     $progress = WKUserManager::getProgress($conn, $userId, $category);
     $prg = $progress["progress"];
-    
+
     if ($prg == 0) {
         $prg = 1;
     }
@@ -44,10 +44,11 @@ catch (PDOException $e) {
 <div id="congrats" class="card-panel blue-grey darken-4">
   <div class="cgt-score">
 		<span class="center">
-			<?php echo "$percent%"; ?>
+			<?php
+      echo "$percent%"; ?>
 		</span>
   </div>
-  
+
   <div class="cgt-opts">
     <button class="btn green">reset</button>
   </div>

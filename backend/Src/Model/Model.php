@@ -12,9 +12,93 @@ namespace App\Model;
 use Exception;
 
 class Model implements VarType {
-    
+
+    private static function isInteger($var) {
+        return is_numeric($var) && is_int($var);
+    }
+
+    /**
+     * Checks whether a variable is of a specified type. If not, then throws an
+     * exceptions with the specified failure message.
+     *
+     * @param $var     mixed variable to check
+     * @param $type    int expected type from var
+     * @param $failMsg string message to throw if check fails
+     *
+     * @throws Exception if the var parameter is not of the specified type
+     */
+    protected static function checkType($var, $type, $failMsg) {
+        switch ($type) {
+            case Model::VAR_TYPE_INT:
+                if (!Model::isInteger($var)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_POSITIVE_INT:
+                if (!(Model::isInteger($var) && $var > 0)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_NEGATIVE_INT:
+                if (!(Model::isInteger($var) && $var < 0)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_NON_NEGATIVE_INT:
+                if (!(Model::isInteger($var) && $var >= 0)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_NON_POSITIVE_INT:
+                if (!(Model::isInteger($var) && $var <= 0)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_FLOAT:
+                if (!is_numeric($var) || !is_float($var)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_DOUBLE:
+                if (!is_numeric($var) || !is_double($var)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_LONG:
+                if (!is_numeric($var) || !is_long($var)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_BOOL:
+                if (!is_bool($var)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_STR:
+                if (!is_string($var)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_NON_EMPTY_STR:
+                if (!is_string($var) || empty(trim($var))) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_OBJECT:
+                if (!is_object($var)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+            case Model::VAR_TYPE_ARRAY:
+                if (!is_array($var)) {
+                    throw new Exception($failMsg);
+                }
+                break;
+        }
+    }
+
     private $id;
-    
+
     /**
      * Constructs an existing user with its specified id and a new user if the
      * id param is not set which is set to -1 by default.
@@ -35,7 +119,7 @@ class Model implements VarType {
         }
         $this->id = $id;
     }
-    
+
     /**
      * Returns the user id. If the user is new, its id is -1.
      *
@@ -44,63 +128,5 @@ class Model implements VarType {
     public final function getId() {
         return $this->id;
     }
-    
-    private static function isInteger($var) {
-        return is_numeric($var) && is_int($var);
-    }
-    
-    /**
-     * Checks whether a variable is of a specified type. If not, then throws an
-     * exceptions with the specified failure message.
-     *
-     * @param $var     mixed variable to check
-     * @param $type    int expected type from var
-     * @param $failMsg string message to throw if check fails
-     *
-     * @throws Exception if the var parameter is not of the specified type
-     */
-    protected static function checkType($var, $type, $failMsg) {
-        switch ($type) {
-            case Model::VAR_TYPE_INT:
-                if (!Model::isInteger($var)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_POSITIVE_INT:
-                if (!(Model::isInteger($var) && $var > 0)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_NEGATIVE_INT:
-                if (!(Model::isInteger($var) && $var < 0)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_NON_NEGATIVE_INT:
-                if (!(Model::isInteger($var) && $var >= 0)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_NON_POSITIVE_INT:
-                if (!(Model::isInteger($var) && $var <= 0)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_FLOAT:
-                if (!is_numeric($var) || !is_float($var)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_DOUBLE:
-                if (!is_numeric($var) || !is_double($var)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_LONG:
-                if (!is_numeric($var) || !is_long($var)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_BOOL:
-                if (!is_bool($var)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_STR:
-                if (!is_string($var)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_NON_EMPTY_STR:
-                if (!is_string($var) || empty(trim($var))) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_OBJECT:
-                if (!is_object($var)) throw new Exception($failMsg);
-                break;
-            case Model::VAR_TYPE_ARRAY:
-                if (!is_array($var)) throw new Exception($failMsg);
-                break;
-        }
-    }
-    
+
 }

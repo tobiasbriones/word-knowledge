@@ -17,16 +17,16 @@ $message = "";
 try {
     $conn = WKDataDB::newInstance();
     $category = new Category($conn, $categoryId);
-    
+
     foreach ($category->subcategories as $subcategory) {
         $format = str_replace(' ', '_', $subcategory);
-        
+
         if (isset($_POST[$format])) {
             $trim = trim($_POST[$format]);
-            
+
             if (!empty($trim)) {
                 $request_array = decode($trim);
-                
+
                 foreach ($request_array as $pair) {
                     if ($pair != null) {
                         if (!exists($conn, $categoryId, $pair->english)) {
@@ -34,7 +34,7 @@ try {
                                 "INSERT INTO cat_$category->id
 								(english, spanish, subcategory) VALUES (?, ?, ?)"
                             );
-                            
+
                             $result->execute(array($pair->english, $pair->spanish, $subcategory));
                             $added[] = $pair;
                         }
@@ -43,10 +43,10 @@ try {
             }
         }
     }
-    
+
     if (count($added) != 0) {
         $message = "Your request have been sent:<br>";
-        
+
         foreach ($added as $pair) {
             $message .= "<strong>$pair->english - $pair->spanish</strong><br>";
         }
@@ -65,10 +65,10 @@ function decode($request) {
     $len = strlen($request);
     $pairs = array();
     $chain = "";
-    
+
     for ($i = 0; $i < $len; $i++) {
         $char = $request[$i];
-        
+
         if ($char == ',') {
             $pairs[] = get_pair($chain);
             $chain = "";
@@ -85,13 +85,13 @@ function decode($request) {
 function get_pair($chain) {
     $pair = new stdClass();
     $pos = strpos($chain, "-");
-    
+
     if (!$pos) {
         return null;
     }
     $english = trim(substr($chain, 0, $pos));
     $spanish = trim(substr($chain, $pos + 1, strlen($chain)));
-    
+
     if (empty($english) || empty($spanish)) {
         return null;
     }
@@ -104,7 +104,7 @@ function exists($conn, $category, $english) {
     $result = $conn->prepare("SELECT id FROM cat_$category WHERE english = ?");
     $result->execute(array($english));
     $rows = $result->fetchAll();
-    
+
     if (count($rows) != 0) {
         return true;
     }

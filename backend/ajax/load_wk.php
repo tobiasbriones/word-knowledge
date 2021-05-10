@@ -17,9 +17,9 @@ $lc = null;
 
 try {
     $conn = WKDataDB::newInstance();
-    
+
     for ($i = 1; $i < 10; $i++) {
-      // This is so wrong jaja
+        // This is so wrong jaja
         $categories[] = new Category($conn, $i);
     }
     $conn = null;
@@ -49,21 +49,24 @@ function cell($id, $title, $image) {
   <div class="card-panel wk-search">
     <div class="row">
       <div class="input-field col s12">
-        <input id="word-search" class="inverse-text" type="text" >
+        <input id="word-search" class="inverse-text" type="text">
         <label for="word-search">
           Search for a word or verb
         </label>
       </div>
     </div>
-    
+
     <div class="wk-results"></div>
   </div>
-    
-    <?php if ($lc != null) { ?>
+
+    <?php
+    if ($lc != null) { ?>
       <div class="card-panel grey darken-4 lc">
         <div class="lc-image"
-             style="background-image: url(<?php echo $lc->getImage(); ?>); background-size: 100% 100%;"></div>
-        <button id="continue" class="btn blue darken-4" data-cat="<?php echo $lc->getId(); ?>">
+             style="background-image: url(<?php
+             echo $lc->getImage(); ?>); background-size: 100% 100%;"></div>
+        <button id="continue" class="btn blue darken-4" data-cat="<?php
+        echo $lc->getId(); ?>">
           continue
         </button>
       </div>
@@ -72,13 +75,17 @@ function cell($id, $title, $image) {
     else {
         $length = count($categories) - 1;
         $lc = $categories[rand(0, $length)]; ?>
-      
+
       <div class="card-panel grey darken-4 lc">
         <div class="lc-image"
-             style="background-image: url(<?php echo $lc->getImage(); ?>); background-size: 100% 100%;"></div>
-        <button id="continue" class="btn blue darken-4" data-cat="<?php echo $lc->getId(); ?>">maybe</button>
+             style="background-image: url(<?php
+             echo $lc->getImage(); ?>); background-size: 100% 100%;"></div>
+        <button id="continue" class="btn blue darken-4" data-cat="<?php
+        echo $lc->getId(); ?>">maybe
+        </button>
       </div>
-    <?php } ?>
+        <?php
+    } ?>
 </aside>
 
 <div class="content">

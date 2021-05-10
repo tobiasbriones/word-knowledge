@@ -13,13 +13,43 @@ use Exception;
 use JsonSerializable;
 
 class User extends Model implements JsonSerializable {
-    
+
+    /**
+     * Validates the user password. It returns <code>true</code> if and only if
+     * the password is accepted.
+     *
+     * @param $password string password to check
+     *
+     * @return bool <code>true</code> if and only if the password is accepted
+     * @throws Exception if the password is rejected
+     */
+    public static function isValidPassword($password) {
+        Model::checkType(
+            $password,
+            Model::VAR_TYPE_NON_EMPTY_STR,
+            "Password must not be empty"
+        );
+        $failMsg = null;
+
+        if (strlen($password) < 6) {
+            $failMsg = "The password must have at least 6 characters length";
+        }
+        else if (strlen($password) > 50) {
+            $failMsg = "The password must have a maximum of 50 characters length";
+        }
+
+        if ($failMsg !== null) {
+            throw new Exception($failMsg);
+        }
+        return true;
+    }
+
     const DEF_SCORE = 0;
     private $name;
     private $information;
     private $score;
     private $sgcPoints;
-    
+
     /**
      * @inheritDoc
      */
@@ -30,7 +60,16 @@ class User extends Model implements JsonSerializable {
         $this->score = User::DEF_SCORE;
         $this->sgcPoints = User::DEF_SCORE;
     }
-    
+
+    /**
+     * Returns the user name.
+     *
+     * @return string user name
+     */
+    public function getName() {
+        return $this->name;
+    }
+
     /**
      * @param string $name user name
      *
@@ -52,7 +91,16 @@ class User extends Model implements JsonSerializable {
         }
         $this->name = $name;
     }
-    
+
+    /**
+     * Returns the user information.
+     *
+     * @return string user information
+     */
+    public function getInformation() {
+        return $this->information;
+    }
+
     /**
      * @param string $information user information, about the user
      *
@@ -70,7 +118,16 @@ class User extends Model implements JsonSerializable {
         }
         $this->information = $information;
     }
-    
+
+    /**
+     * Returns the user score.
+     *
+     * @return int user score
+     */
+    public function getScore() {
+        return $this->score;
+    }
+
     /**
      * @param int $score user main score
      *
@@ -84,7 +141,16 @@ class User extends Model implements JsonSerializable {
         );
         $this->score = $score;
     }
-    
+
+    /**
+     * Returns the user SGC points.
+     *
+     * @return int user SGC points
+     */
+    public function getSgcPoints() {
+        return $this->sgcPoints;
+    }
+
     /**
      * @param int $sgcPoints SGC user points
      *
@@ -98,73 +164,7 @@ class User extends Model implements JsonSerializable {
         );
         $this->sgcPoints = $sgcPoints;
     }
-    
-    /**
-     * Returns the user name.
-     *
-     * @return string user name
-     */
-    public function getName() {
-        return $this->name;
-    }
-    
-    /**
-     * Returns the user information.
-     *
-     * @return string user information
-     */
-    public function getInformation() {
-        return $this->information;
-    }
-    
-    /**
-     * Returns the user score.
-     *
-     * @return int user score
-     */
-    public function getScore() {
-        return $this->score;
-    }
-    
-    /**
-     * Returns the user SGC points.
-     *
-     * @return int user SGC points
-     */
-    public function getSgcPoints() {
-        return $this->sgcPoints;
-    }
-    
-    /**
-     * Validates the user password. It returns <code>true</code> if and only if
-     * the password is accepted.
-     *
-     * @param $password string password to check
-     *
-     * @return bool <code>true</code> if and only if the password is accepted
-     * @throws Exception if the password is rejected
-     */
-    public static function isValidPassword($password) {
-        Model::checkType(
-            $password,
-            Model::VAR_TYPE_NON_EMPTY_STR,
-            "Password must not be empty"
-        );
-        $failMsg = null;
-        
-        if (strlen($password) < 6) {
-            $failMsg = "The password must have at least 6 characters length";
-        }
-        else if (strlen($password) > 50) {
-            $failMsg = "The password must have a maximum of 50 characters length";
-        }
-        
-        if ($failMsg !== null) {
-            throw new Exception($failMsg);
-        }
-        return true;
-    }
-    
+
     /**
      * @inheritDoc
      */
@@ -176,5 +176,5 @@ class User extends Model implements JsonSerializable {
             "score" => $this->getScore()
         ];
     }
-    
+
 }

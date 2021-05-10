@@ -8,20 +8,23 @@
 
 <!doctype html>
 <html lang="en">
-  
+
   <head>
     <title>Register</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <link rel="stylesheet" type="text/css" href="libs/materialize/css/materialize.min.css" media="screen, projection">
+    <link rel="stylesheet"
+          type="text/css"
+          href="libs/materialize/css/materialize.min.css"
+          media="screen, projection">
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/form.css">
     <link rel="stylesheet" type="text/css" href="css/register.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
   </head>
-  
+
   <body>
-    
+
     <div class="row container">
       <div id="form-parent">
         <form id="form"
@@ -29,7 +32,7 @@
               enctype="multipart/form-data"
               action="backend/api/v0/user.php"
               method="post">
-          
+
           <div class="row">
             <div class="input-field col s12">
               <input class="white-text" id="user" name="name" type="text" length="25">
@@ -38,7 +41,7 @@
               </label>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="file-field input-field col s12">
               <input class="file-path white-text" id="avatar" type="text" />
@@ -51,7 +54,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="input-field col s12">
               <input class="white-text" type="password" id="password" name="password" />
@@ -59,18 +62,21 @@
                 Password
               </label>
             </div>
-          
+
           </div>
-          
+
           <div class="row">
             <div class="input-field col s12">
-              <input class="white-text" type="password" id="confirm_password" name="confirm_password">
+              <input class="white-text"
+                     type="password"
+                     id="confirm_password"
+                     name="confirm_password">
               <label for="confirm_password">
                 Confirm password
               </label>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="input-field col s12">
 						<textarea id="information"
@@ -83,23 +89,23 @@
               </label>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="input-field col s12">
               <input class="btn cyan darken-4" type="submit" name="send" value="Register" />
             </div>
           </div>
-        
+
         </form>
       </div>
-      
+
       <div class="col s12 m7 l6" id="input_errors"></div>
     </div>
-    
+
     <script src="libs/jquery-dist-3.5.0/jquery.min.js"></script>
     <script src="libs/materialize/js/materialize.min.js"></script>
     <script src="js/register.js"></script>
-  
+
   </body>
 
 </html>

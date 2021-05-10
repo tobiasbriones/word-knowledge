@@ -21,10 +21,10 @@
   height: 150px;
   padding: 8px 16px;
   z-index: 1;
+  background: #212121;
   transition: transform 400ms;
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
-  background: #212121;
 }
 
 .subcategories {
@@ -53,8 +53,8 @@
 }
 
 .sc-selected {
-  border: 1px solid rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .menu-item {
@@ -88,22 +88,22 @@
   .nav-wrapper {
     max-height: 64px;
   }
-  
+
   .toolbar-menu {
     height: 120px;
   }
-  
+
   .menu-item {
     width: 250px;
     padding: 2%;
   }
-  
+
   .menu-item .checkbox {
     display: inline-block;
     width: 49%;
     top: -30px;
   }
-  
+
   .subcategories li {
     width: 32.3%;
   }
@@ -113,22 +113,22 @@
   .toolbar-menu {
     height: 220px;
   }
-  
+
   .menu-item {
     width: 280px;
     padding: 1.5%;
   }
-  
+
   .menu-item .checkbox {
     display: inline-block;
     width: 49%;
     top: -30px;
   }
-  
+
   .subcategories {
     padding: 1%;
   }
-  
+
   .subcategories li {
     display: inline-block;
     width: 24%;
@@ -140,13 +140,13 @@
   .menu-item {
     padding: 1%;
   }
-  
+
   .menu-item .checkbox {
     display: inline-block;
     width: 49%;
     top: -30px;
   }
-  
+
   .subcategories li {
     display: inline-block;
     width: 19%;
@@ -161,10 +161,10 @@
     padding: 1%;
     bottom: 0;
     overflow: auto;
-    transition: transform 600ms;
     background: #F0F0F0;
+    transition: transform 600ms;
   }
-  
+
   .subcategories li {
     display: block;
     width: 100%;

@@ -13,7 +13,9 @@ use App\Api\V0\Controller\UserController;
 use App\Database\UsersDB;
 use App\Model\User;
 
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header(
+    "Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+);
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Max-Age: 600");
@@ -42,14 +44,14 @@ function read() {
     function check_input() {
         $params_set = true;
         $params_set &= isset($_GET["id"]);
-        
+
         if (!$params_set) {
             $msg = "Wrong arguments or number of arguments. Check the API documentation";
             throw new Exception($msg);
         }
         return true;
     }
-    
+
     function check_params() {
         if (!is_numeric($_GET["id"]) || !is_int((int) $_GET["id"]) || $_GET["id"] < 0) {
             $msg = "The user id is a non-negative integer number";
@@ -57,7 +59,7 @@ function read() {
         }
         return true;
     }
-    
+
     try {
         check_input();
         check_params();
@@ -68,7 +70,7 @@ function read() {
     }
     $user_id = (int) $_GET["id"];
     $user_controller = new UserController(UsersDB::newInstance());
-    
+
     try {
         $user = $user_controller->read($user_id);
     }
@@ -92,14 +94,14 @@ function create() {
         $params_set &= isset($_POST["name"]);
         $params_set &= isset($_POST["password"]);
         $params_set &= isset($_POST["confirm_password"]);
-        
+
         if (!$params_set) {
             $msg = "Wrong arguments or number of arguments. Check the API documentation";
             throw new Exception($msg);
         }
         return true;
     }
-    
+
     /**
      * Returns <code>true</code> if and only if the params are valid.
      *
@@ -113,7 +115,7 @@ function create() {
         }
         return true;
     }
-    
+
     /**
      * Returns the user object with the specified client's input.
      *
@@ -124,14 +126,14 @@ function create() {
         $name = $_POST["name"];
         $information = $_POST["information"];
         $user = new User();
-        
+
         $user->setName($name);
         $user->setInformation($information);
         return $user;
     }
-    
+
     $new_user = null;
-    
+
     try {
         check_input();
         check_params();
@@ -141,23 +143,23 @@ function create() {
         error($e->getMessage(), 400);
         return;
     }
-    
+
     $password = $_POST["password"];
     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-    
+
     // This should never happen
     if ($hashed_password === null || $hashed_password === false) {
         $msg = "Fail to create user, try again or use another password";
-        
+
         error($msg, 500);
         exit;
     }
-    
+
     $params = [
         "hashed_password" => $hashed_password
     ];
     $user_controller = new UserController(UsersDB::newInstance());
-    
+
     //$avatarUploaded = $_FILES["avatar"]["tmp_name"];
     try {
         $user_controller->create($new_user, $params);

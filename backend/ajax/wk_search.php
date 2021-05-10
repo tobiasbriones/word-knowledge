@@ -19,16 +19,22 @@ if (!isset($_POST["word"])) {
 
 header("Content-Type: application/json;charset: utf-8");
 $categories = [
-    "About grammar", "Foods & Meals", "Miscellaneous", "Nature",
-    "Parts of things", "People", "Places",
-    "Products & Things", "Technicalities & Tools"
+    "About grammar",
+    "Foods & Meals",
+    "Miscellaneous",
+    "Nature",
+    "Parts of things",
+    "People",
+    "Places",
+    "Products & Things",
+    "Technicalities & Tools"
 ];
 $found = array();
 $searchFor = $_POST["word"];
 
 try {
     $conn = WKDataDB::newInstance();
-    
+
     $i = 1;
     foreach ($categories as $category) {
         $query = "
@@ -40,7 +46,7 @@ try {
         $result = $conn->prepare($query);
         $result->execute(array("$searchFor*"));
         $pairs = $result->fetchAll();
-        
+
         if (count($pairs) > 0) {
             $found[$category] = $pairs;
         }

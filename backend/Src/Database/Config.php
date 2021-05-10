@@ -10,9 +10,9 @@
 namespace App\Database;
 
 class Config {
-    
+
     const PORT = 3308;
     const HOST = 'localhost:' . Config::PORT;
     const ROOT_USER = 'root';
-    
+
 }

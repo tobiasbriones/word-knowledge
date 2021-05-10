@@ -61,7 +61,7 @@ body {
   .card-panel {
     height: 120px;
   }
-  
+
   .user, .score, .wk-points {
     font-size: 1.8rem;
   }
@@ -78,11 +78,11 @@ body {
     left: 5%;
     transition: all 400ms;
   }
-  
+
   .user, .score, .wk-points {
     font-size: 2rem;
   }
-  
+
   .edit {
     transform: translate(-200%, -200%);
   }
@@ -93,7 +93,7 @@ body {
     width: 70%;
     left: 15%;
   }
-  
+
   .card-panel {
     height: 45% !important;
     top: 0;
@@ -102,26 +102,26 @@ body {
 
 @media screen and (min-width: 1020px) {
   body {
-    font-size: 1.5rem;
     overflow: hidden;
+    font-size: 1.5rem;
   }
-  
+
   #container {
     width: 60%;
     padding: 8% 2%;
     left: 20%;
   }
-  
+
   .card-panel {
     height: 20% !important;
     top: 0;
   }
-  
+
   .avatar {
     display: inline-block;
     height: 100%;
   }
-  
+
   .user {
     position: absolute;
     display: inline-block;
@@ -130,7 +130,7 @@ body {
     font-size: 1.4rem;
     transform: translateY(-50%);
   }
-  
+
   .score, .wk-points {
     position: absolute;
     display: inline-block;
@@ -140,7 +140,7 @@ body {
     font-size: 1.4rem;
     transform: translate(-50%, -50%);
   }
-  
+
   .edit {
     position: fixed;
     top: 100%;
@@ -148,12 +148,12 @@ body {
     transition: all 500ms;
     transform: translate(-150%, -150%);
   }
-  
+
   .card-panel {
     height: 30%;
     min-height: 120px;
   }
-  
+
   .user, .score, .wk-points {
     font-size: 2.4rem;
   }

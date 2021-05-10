@@ -22,7 +22,7 @@ try {
     $conn = UsersDB::newInstance();
     $senderId = UserManager::retrieveUserId();
     $recId = User::findUserByName($conn, $rec)->id;
-    
+
     if ($senderId == UserManager::NO_USER || $recId == null) {
         exit();
     }

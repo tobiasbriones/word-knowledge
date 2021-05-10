@@ -17,64 +17,64 @@ aside {
     height: 100%;
     float: right;
   }
-  
+
   .user-panel {
     width: 100%;
     height: 35%;
     min-height: 200px;
   }
-  
+
   .score {
     width: 100%;
     height: 35%;
     top: 0;
     background: #E0E0E0;
   }
-  
+
   .score span {
     font-size: 2.1rem;
     font-weight: bolder;
   }
-  
+
   .msg {
     position: absolute;
     display: inline-block;
     width: 35%;
     bottom: 8%;
-    cursor: pointer;
-    transition: transform 200ms;
     background-image: url(../../img/icons/msg.png);
     background-size: 100% 100%;
+    transition: transform 200ms;
+    cursor: pointer;
   }
-  
+
   .msg:before {
     content: '';
     display: block;
     padding-top: 85%;
   }
-  
+
   .msg:active {
     -webkit-transform: translateY(-2%);
     transform: translateY(-2%);
   }
-  
+
   .msg div {
     position: absolute;
     width: 14px;
     height: 14px;
     bottom: 22%;
     left: 10%;
-    cursor: inherit;
-    border-radius: 50%;
     background: #00695C;
+    border-radius: 50%;
+    cursor: inherit;
   }
-  
+
   .msg div span {
     font-size: 10px;
     font-weight: bolder;
     color: #FFFFFF;
   }
-  
+
   .sgc {
     position: absolute;
     display: inline-block;
@@ -83,7 +83,7 @@ aside {
     right: 10%;
     bottom: 5%;
   }
-  
+
   .sgc .card-panel {
     position: absolute;
     width: 100%;
@@ -91,21 +91,21 @@ aside {
     bottom: 0;
     border-radius: 50% 0 50% 0;
   }
-  
+
   .sgc .card-panel span {
     font-size: 1.3rem;
     font-weight: bolder;
   }
-  
+
   .hey-reg {
     font-style: italic;
     color: #2E7D32;
   }
-  
+
   .hey-reg p {
     margin-bottom: 0.5em;
   }
-  
+
   .something {
     height: 20%;
   }
@@ -115,12 +115,12 @@ aside {
   aside {
     width: 30%;
   }
-  
+
   .msg {
     width: 30%;
     bottom: 7%;
   }
-  
+
   .sgc {
     width: 40%;
   }
@@ -131,16 +131,16 @@ aside {
     width: 32%;
     bottom: 6%;
   }
-  
+
   .msg div {
     width: 18px;
     height: 18px;
   }
-  
+
   .msg div span {
     font-size: 12px;
   }
-  
+
   .sgc {
     width: 40%;
   }

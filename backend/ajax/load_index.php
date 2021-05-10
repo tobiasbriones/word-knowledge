@@ -30,21 +30,27 @@ function printUserPanel() {
     ?>
   <div class="card-panel score">
     <span class="center inverse-text">
-      <?php echo $score; ?>
+      <?php
+      echo $score; ?>
     </span>
   </div>
-  
+
   <div class="msg">
-    <div <?php if ($nm == 0) echo "style='display:none'"; ?>>
-      <span class="center unselectable"><?php echo $nm; ?></span>
+    <div <?php
+    if ($nm == 0) {
+        echo "style='display:none'";
+    } ?>>
+      <span class="center unselectable"><?php
+          echo $nm; ?></span>
     </div>
   </div>
-  
+
   <div class="sgc">
     <span class="white-text">SGC</span>
     <div class="card-panel blue darken-2">
       <span class="center inverse-text">
-        <?php echo $sgc; ?>
+        <?php
+        echo $sgc; ?>
       </span>
     </div>
   </div>
@@ -56,7 +62,7 @@ function printHeyReg() {
 <div class="hey-reg">
   <p>Create an account or login and join us!</p>
   <p>It's fast and easy and you'll be able to participate, save data and more</p>
-  
+
   <div>
       <?php
       }
@@ -75,7 +81,6 @@ function printHeyReg() {
       <div class="card-panel blue-grey darken-4 something">
       </div>
     </aside>
-    
+
     <div class="content">
     </div>
-	

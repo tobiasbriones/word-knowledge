@@ -15,8 +15,8 @@ footer {
 }
 
 footer p {
-  color: white;
   text-align: center;
+  color: white;
 }
 
 footer p > i {
@@ -43,11 +43,11 @@ footer p > i {
 
 #cookies-msg > span {
   position: absolute;
+  padding: 8px;
   top: 50%;
   right: 32px;
-  padding: 8px;
-  transform: translateY(-50%);
   color: darkred;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 
@@ -64,8 +64,8 @@ footer p > i {
 
 .menu-item a {
   height: 48px;
-  line-height: 48px;
   cursor: pointer;
+  line-height: 48px;
 }
 
 .menu-item a:hover {
@@ -88,15 +88,15 @@ footer p > i {
   body {
     min-height: 480px;
   }
-  
+
   #toolbar {
     height: 136px;
   }
-  
+
   .container {
     height: calc(100% - 136px);
   }
-  
+
   .content {
     width: 63%;
     height: 100%;
@@ -107,7 +107,7 @@ footer p > i {
   body {
     min-height: 600px;
   }
-  
+
   .content {
     width: 68%;
     height: 100%;
@@ -118,7 +118,7 @@ footer p > i {
   .container {
     width: 75%;
   }
-  
+
   .content {
     width: 67%;
     height: 100%;

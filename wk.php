@@ -13,21 +13,20 @@ use App\Database\WKDataDB;
 use App\Model\WK\Category;
 
 if (!isset($_GET["c"])) {
-  header("Location: index.php?go=WK");
-  exit();
+    header("Location: index.php?go=WK");
+    exit();
 }
 
 $category = null;
 
 // -------------------- CONNECT -------------------- //
 try {
-  $wkConn = WKDataDB::newInstance();
-  $category = new Category($wkConn, (int) $_GET["c"]);
-  
+    $wkConn = WKDataDB::newInstance();
+    $category = new Category($wkConn, (int) $_GET["c"]);
 }
 catch (Exception $e) {
-  echo "<strong>Failed to connect</strong>";
-  exit();
+    echo "<strong>Failed to connect</strong>";
+    exit();
 }
 
 // -------------------- SAVE AS LAST CATEGORY -------------------- //
@@ -36,12 +35,15 @@ setcookie("lc", $category->getId(), time() + (60 * 60 * 24 * 7 * 4 * 12));
 
 <!doctype html>
 <html lang="en">
-  
+
   <head>
     <title>Word Knowledge</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="libs/materialize/css/materialize.min.css" media="screen, projection">
+    <link rel="stylesheet"
+          type="text/css"
+          href="libs/materialize/css/materialize.min.css"
+          media="screen, projection">
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <link rel="stylesheet" type="text/css" href="css/toolbar.css">
     <link rel="stylesheet" type="text/css" href="css/wk/menu.css">
@@ -50,16 +52,17 @@ setcookie("lc", $category->getId(), time() + (60 * 60 * 24 * 7 * 4 * 12));
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
   </head>
-  
+
   <body>
-    
+
     <header>
       <nav id="toolbar" class="grey darken-4">
         <!-- --------------------------  TOOLBAR  -------------------------- -->
         <div class="nav-wrapper">
           <a href="index.php?go=wk" class="logo-icon wk-icon"></a>
           <a class="brand-logo hide-on-small-only">
-            <?php echo $category->getName(); ?>
+              <?php
+              echo $category->getName(); ?>
           </a>
           <ul class="right">
             <li>
@@ -67,14 +70,14 @@ setcookie("lc", $category->getId(), time() + (60 * 60 * 24 * 7 * 4 * 12));
             </li>
           </ul>
         </div>
-        
+
         <!-- -----------------------  TOOLBAR MENU  ------------------------ -->
         <div class="toolbar-menu">
           <div class="menu-item row">
             <div class="row">
               <span>Mode</span>
             </div>
-            
+
             <div class="row">
               <p>
                 <label>
@@ -90,7 +93,7 @@ setcookie("lc", $category->getId(), time() + (60 * 60 * 24 * 7 * 4 * 12));
               </p>
             </div>
           </div>
-          
+
           <div class="menu-item row">
             <div class="row">
               <span>Order</span>
@@ -98,13 +101,19 @@ setcookie("lc", $category->getId(), time() + (60 * 60 * 24 * 7 * 4 * 12));
             <div class="row">
               <p>
                 <label>
-                  <input id="order_impartial" type="checkbox" class="filled-in" data-group="order_subcategories">
+                  <input id="order_impartial"
+                         type="checkbox"
+                         class="filled-in"
+                         data-group="order_subcategories">
                   <span>Impartial</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input id="order_subcategories"  type="checkbox" class="filled-in" data-group="order_impartial">
+                  <input id="order_subcategories"
+                         type="checkbox"
+                         class="filled-in"
+                         data-group="order_impartial">
                   <span>Subcategories</span>
                 </label>
               </p>
@@ -113,32 +122,33 @@ setcookie("lc", $category->getId(), time() + (60 * 60 * 24 * 7 * 4 * 12));
         </div>
       </nav>
     </header>
-    
+
     <div id="subcategories" class="subcategories z-depth-1">
       <ul>
-        <?php
-        foreach ($category->getSubcategories() as $subcategory) {
-          echo "<li class='unselectable' data-sc='$subcategory'><span>$subcategory</span></li>";
-        }
-        ?>
+          <?php
+          foreach ($category->getSubcategories() as $subcategory) {
+              echo "<li class='unselectable' data-sc='$subcategory'><span>$subcategory</span></li>";
+          }
+          ?>
       </ul>
     </div>
-    
+
     <div class="container">
-      <div class="content" data-category="<?php echo $category->getId(); ?>">
+      <div class="content" data-category="<?php
+      echo $category->getId(); ?>">
         <div class="game">
         </div>
-        
+
         <div class="study">
         </div>
       </div>
     </div>
-  
+
     <script src="libs/jquery-dist-3.5.0/jquery.min.js"></script>
     <script src="libs/materialize/js/materialize.min.js"></script>
     <script src="libs/js-cookie-2.2.1/js.cookie-2.2.1.min.js"></script>
     <script src="js/wk.js"></script>
-  
+
   </body>
 
 </html>

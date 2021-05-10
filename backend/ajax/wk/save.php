@@ -23,12 +23,12 @@ $cps = $_POST["cps"];
 
 try {
     $userId = UserManager::retrieveUserId();
-    
+
     if ($userId == UserManager::NO_USER) {
         exit();
     }
     $conn = UsersDB::newInstance();
-    
+
     WKUserManager::saveProgress($conn, $userId, $category, $cps);
     $conn = null;
 }

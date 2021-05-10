@@ -10,25 +10,27 @@
 namespace App\Api\V0\Controller;
 
 abstract class Controller {
-    
+
     private $db;
 
-//    public function __construct() {
-//        $this->db = null;
-//    }
+    //    public function __construct() {
+    //        $this->db = null;
+    //    }
 
-// Temporal constructor
+    // Temporal constructor
     public function __construct($db) {
         $this->db = $db;
     }
-    
+
     /**
      * @return object the Database connection
      * @throws Exception if the Database is not initialized
      */
     protected final function getDatabase() {
-        if ($this->db == null) throw new Exception("Database is not initialized");
+        if ($this->db == null) {
+            throw new Exception("Database is not initialized");
+        }
         return $this->db;
     }
-    
+
 }

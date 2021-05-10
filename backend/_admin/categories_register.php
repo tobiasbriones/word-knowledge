@@ -30,15 +30,15 @@ $reg_sql = "CREATE TABLE reg (id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
 
 try {
     $conn = WKDataDB::newInstance();
-    
+
     $conn->exec($reg_sql);
-    
+
     $result = $conn->prepare("INSERT INTO reg (name, subcategories) VALUES (?, ?)");
-    
+
     $i = 1;
     foreach ($categories_json as $category => $subcategories) {
         $subcategoriesJSON = json_encode($subcategories);
-        
+
         if (strlen($subcategoriesJSON) > 300) {
             echo "Too much scs in $i";
             exit();
@@ -61,4 +61,3 @@ catch (PDOException $e) {
     echo "Error processing<br>$e";
     exit();
 }
-	

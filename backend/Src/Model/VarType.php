@@ -10,6 +10,7 @@
 namespace App\Model;
 
 interface VarType {
+
     const VAR_TYPE_INT = 0;
     const VAR_TYPE_POSITIVE_INT = 1;
     const VAR_TYPE_NEGATIVE_INT = 2;
@@ -23,4 +24,5 @@ interface VarType {
     const VAR_TYPE_NON_EMPTY_STR = 101;
     const VAR_TYPE_OBJECT = 200;
     const VAR_TYPE_ARRAY = 300;
+
 }

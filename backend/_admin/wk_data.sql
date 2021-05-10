@@ -7,7 +7,7 @@
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.26
 
-SET SQL_MODE = "no_auto_value_on_zero";
+SET SQL_MODE = no_auto_value_on_zero;
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -28,12 +28,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `cat_1`
 --
 
-CREATE TABLE `cat_1`
-(
-    `id`          SMALLINT(5) UNSIGNED                NOT NULL,
-    `english`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `spanish`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `subcategory` VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE cat_1 (
+  id          SMALLINT(5) UNSIGNED                NOT NULL,
+  english     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  spanish     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  subcategory VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
@@ -42,7 +41,7 @@ CREATE TABLE `cat_1`
 -- Dumping data for table `cat_1`
 --
 
-INSERT INTO `cat_1` (`id`, `english`, `spanish`, `subcategory`)
+INSERT INTO cat_1 (id, english, spanish, subcategory)
 VALUES (1, 'fun', 'divertido', 'Adjectives'),
        (2, 'red', 'rojo', 'Adjectives'),
        (3, 'sad', 'triste', 'Adjectives'),
@@ -72,12 +71,11 @@ VALUES (1, 'fun', 'divertido', 'Adjectives'),
 -- Table structure for table `cat_2`
 --
 
-CREATE TABLE `cat_2`
-(
-    `id`          SMALLINT(5) UNSIGNED                NOT NULL,
-    `english`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `spanish`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `subcategory` VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE cat_2 (
+  id          SMALLINT(5) UNSIGNED                NOT NULL,
+  english     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  spanish     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  subcategory VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
@@ -86,7 +84,7 @@ CREATE TABLE `cat_2`
 -- Dumping data for table `cat_2`
 --
 
-INSERT INTO `cat_2` (`id`, `english`, `spanish`, `subcategory`)
+INSERT INTO cat_2 (id, english, spanish, subcategory)
 VALUES (1, 'juice', 'jugo', 'Beverages'),
        (2, 'beer', 'cerveza', 'Beverages'),
        (3, 'glass of wine', 'copa de vino', 'Beverages'),
@@ -164,12 +162,11 @@ VALUES (1, 'juice', 'jugo', 'Beverages'),
 -- Table structure for table `cat_3`
 --
 
-CREATE TABLE `cat_3`
-(
-    `id`          SMALLINT(5) UNSIGNED                NOT NULL,
-    `english`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `spanish`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `subcategory` VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE cat_3 (
+  id          SMALLINT(5) UNSIGNED                NOT NULL,
+  english     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  spanish     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  subcategory VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
@@ -178,7 +175,7 @@ CREATE TABLE `cat_3`
 -- Dumping data for table `cat_3`
 --
 
-INSERT INTO `cat_3` (`id`, `english`, `spanish`, `subcategory`)
+INSERT INTO cat_3 (id, english, spanish, subcategory)
 VALUES (1, 'allergy', 'alergia', 'Health problems'),
        (2, 'anemia', 'anemia', 'Health problems'),
        (3, 'asthma', 'asma', 'Health problems'),
@@ -206,12 +203,11 @@ VALUES (1, 'allergy', 'alergia', 'Health problems'),
 -- Table structure for table `cat_4`
 --
 
-CREATE TABLE `cat_4`
-(
-    `id`          SMALLINT(5) UNSIGNED                NOT NULL,
-    `english`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `spanish`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `subcategory` VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE cat_4 (
+  id          SMALLINT(5) UNSIGNED                NOT NULL,
+  english     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  spanish     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  subcategory VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
@@ -220,7 +216,7 @@ CREATE TABLE `cat_4`
 -- Dumping data for table `cat_4`
 --
 
-INSERT INTO `cat_4` (`id`, `english`, `spanish`, `subcategory`)
+INSERT INTO cat_4 (id, english, spanish, subcategory)
 VALUES (1, 'cat', 'gato', 'Fauna'),
        (2, 'dog', 'perro', 'Fauna'),
        (3, 'puppy', 'perrito', 'Fauna'),
@@ -264,12 +260,11 @@ VALUES (1, 'cat', 'gato', 'Fauna'),
 -- Table structure for table `cat_5`
 --
 
-CREATE TABLE `cat_5`
-(
-    `id`          SMALLINT(5) UNSIGNED                NOT NULL,
-    `english`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `spanish`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `subcategory` VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE cat_5 (
+  id          SMALLINT(5) UNSIGNED                NOT NULL,
+  english     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  spanish     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  subcategory VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
@@ -278,7 +273,7 @@ CREATE TABLE `cat_5`
 -- Dumping data for table `cat_5`
 --
 
-INSERT INTO `cat_5` (`id`, `english`, `spanish`, `subcategory`)
+INSERT INTO cat_5 (id, english, spanish, subcategory)
 VALUES (1, 'cover', 'portada', 'The book'),
        (2, 'battery', 'bater??a', 'The cell phone'),
        (3, 'keyboard', 'teclado', 'The computer'),
@@ -291,12 +286,11 @@ VALUES (1, 'cover', 'portada', 'The book'),
 -- Table structure for table `cat_6`
 --
 
-CREATE TABLE `cat_6`
-(
-    `id`          SMALLINT(5) UNSIGNED                NOT NULL,
-    `english`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `spanish`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `subcategory` VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE cat_6 (
+  id          SMALLINT(5) UNSIGNED                NOT NULL,
+  english     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  spanish     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  subcategory VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
@@ -305,7 +299,7 @@ CREATE TABLE `cat_6`
 -- Dumping data for table `cat_6`
 --
 
-INSERT INTO `cat_6` (`id`, `english`, `spanish`, `subcategory`)
+INSERT INTO cat_6 (id, english, spanish, subcategory)
 VALUES (1, 'head', 'cabeza', 'Body parts'),
        (2, 'back', 'espalda', 'Body parts'),
        (3, 'eyes', 'ojos', 'Body parts'),
@@ -389,12 +383,11 @@ VALUES (1, 'head', 'cabeza', 'Body parts'),
 -- Table structure for table `cat_7`
 --
 
-CREATE TABLE `cat_7`
-(
-    `id`          SMALLINT(5) UNSIGNED                NOT NULL,
-    `english`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `spanish`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `subcategory` VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE cat_7 (
+  id          SMALLINT(5) UNSIGNED                NOT NULL,
+  english     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  spanish     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  subcategory VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
@@ -403,7 +396,7 @@ CREATE TABLE `cat_7`
 -- Dumping data for table `cat_7`
 --
 
-INSERT INTO `cat_7` (`id`, `english`, `spanish`, `subcategory`)
+INSERT INTO cat_7 (id, english, spanish, subcategory)
 VALUES (1, 'garden', 'jardín', 'At home'),
        (2, 'carpet', 'alfombra', 'At home'),
        (3, 'closet', 'ropero', 'At home'),
@@ -529,12 +522,11 @@ VALUES (1, 'garden', 'jardín', 'At home'),
 -- Table structure for table `cat_8`
 --
 
-CREATE TABLE `cat_8`
-(
-    `id`          SMALLINT(5) UNSIGNED                NOT NULL,
-    `english`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `spanish`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `subcategory` VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE cat_8 (
+  id          SMALLINT(5) UNSIGNED                NOT NULL,
+  english     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  spanish     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  subcategory VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
@@ -543,7 +535,7 @@ CREATE TABLE `cat_8`
 -- Dumping data for table `cat_8`
 --
 
-INSERT INTO `cat_8` (`id`, `english`, `spanish`, `subcategory`)
+INSERT INTO cat_8 (id, english, spanish, subcategory)
 VALUES (1, 'food processor', 'procesador de comida', 'Appliances'),
        (2, 'pressure cooker', 'olla de presión', 'Appliances'),
        (3, 'blender', 'licuadora', 'Appliances'),
@@ -597,12 +589,11 @@ VALUES (1, 'food processor', 'procesador de comida', 'Appliances'),
 -- Table structure for table `cat_9`
 --
 
-CREATE TABLE `cat_9`
-(
-    `id`          SMALLINT(5) UNSIGNED                NOT NULL,
-    `english`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `spanish`     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
-    `subcategory` VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE cat_9 (
+  id          SMALLINT(5) UNSIGNED                NOT NULL,
+  english     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  spanish     VARCHAR(50) COLLATE utf8_unicode_ci NOT NULL,
+  subcategory VARCHAR(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
@@ -611,7 +602,7 @@ CREATE TABLE `cat_9`
 -- Dumping data for table `cat_9`
 --
 
-INSERT INTO `cat_9` (`id`, `english`, `spanish`, `subcategory`)
+INSERT INTO cat_9 (id, english, spanish, subcategory)
 VALUES (1, 'wire', 'alambre', 'Electricity & Electronic'),
        (2, 'multimeter', 'multímetro', 'Electricity & Electronic'),
        (3, 'welding', 'soldadura', 'Electricity & Electronic'),
@@ -630,11 +621,10 @@ VALUES (1, 'wire', 'alambre', 'Electricity & Electronic'),
 -- Table structure for table `reg`
 --
 
-CREATE TABLE `reg`
-(
-    `id`            TINYINT(3) UNSIGNED                  NOT NULL,
-    `name`          VARCHAR(30) COLLATE utf8_unicode_ci  NOT NULL,
-    `subcategories` VARCHAR(300) COLLATE utf8_unicode_ci NOT NULL
+CREATE TABLE reg (
+  id            TINYINT(3) UNSIGNED                  NOT NULL,
+  name          VARCHAR(30) COLLATE utf8_unicode_ci  NOT NULL,
+  subcategories VARCHAR(300) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE = MyISAM
   DEFAULT CHARSET = utf8
   COLLATE = utf8_unicode_ci;
@@ -643,24 +633,33 @@ CREATE TABLE `reg`
 -- Dumping data for table `reg`
 --
 
-INSERT INTO `reg` (`id`, `name`, `subcategories`)
-VALUES (1, 'About grammar',
+INSERT INTO reg (id, name, subcategories)
+VALUES (1,
+        'About grammar',
         '[\"Adjectives\",\"Adverbs\",\"Irregular verbs (Participle)\",\"Irregular verbs (Past)\",\"Verbs\"]'),
-       (2, 'Foods & Meals',
+       (2,
+        'Foods & Meals',
         '[\"Beverages\",\"Dairy products\",\"Fish & Seafood\",\"Fruits\",\"Healthy & Unhealthy\",\"Herbs\",\"Meats & Seasoning\",\"Pasta\",\"Soups\",\"Sweets & Desserts\",\"Vegetables\"]'),
-       (3, 'Miscellaneous',
+       (3,
+        'Miscellaneous',
         '[\"Cardinal numbers\",\"Colors\",\"Health problems\",\"Not rated\",\"Ordinal numbers\",\"Transportation\"]'),
-       (4, 'Nature',
+       (4,
+        'Nature',
         '[\"Fauna\",\"Flora\",\"Habitats\",\"Natural phenomena\",\"The universe\",\"The weather & Seasons\"]'),
-       (5, 'Parts of things',
+       (5,
+        'Parts of things',
         '[\"The bicycle\",\"The book\",\"The car\",\"The cell phone\",\"The computer\",\"The ship\"]'),
-       (6, 'People',
+       (6,
+        'People',
         '[\"Activities\",\"Body parts\",\"Chores\",\"Clothing\",\"Family & Relatives\",\"Moods\",\"Physical defects\",\"Politics\",\"Professions\",\"Society\",\"The look\"]'),
-       (7, 'Places',
+       (7,
+        'Places',
         '[\"At home\",\"At the airport\",\"At the bank\",\"At the bar\",\"At the beach\",\"At the beauty salon\",\"At the bookstore\",\"At the downtown\",\"At the drugstore\",\"At the gym\",\"At the hardware store\",\"At the hotel\",\"At the mall\",\"At the restaurant\",\"At the school\",\"At the supermarket\",\"At the workplace\"]'),
-       (8, 'Products & Things',
+       (8,
+        'Products & Things',
         '[\"Appliances\",\"Containers\",\"Electronic\",\"Everyday products\",\"Furniture\",\"Materials\",\"Music\"]'),
-       (9, 'Technicalities & Tools',
+       (9,
+        'Technicalities & Tools',
         '[\"Business & Sales\",\"Electricity & Electronic\",\"Farm machinery\",\"Law\",\"Math & Physics\",\"Mechanics\",\"Science\"]');
 
 --
@@ -670,80 +669,80 @@ VALUES (1, 'About grammar',
 --
 -- Indexes for table `cat_1`
 --
-ALTER TABLE `cat_1`
-    ADD PRIMARY KEY (`id`);
-ALTER TABLE `cat_1`
-    ADD FULLTEXT KEY `english` (`english`, `spanish`);
+ALTER TABLE cat_1
+  ADD PRIMARY KEY (id);
+ALTER TABLE cat_1
+  ADD FULLTEXT KEY english (english, spanish);
 
 --
 -- Indexes for table `cat_2`
 --
-ALTER TABLE `cat_2`
-    ADD PRIMARY KEY (`id`);
-ALTER TABLE `cat_2`
-    ADD FULLTEXT KEY `english` (`english`, `spanish`);
+ALTER TABLE cat_2
+  ADD PRIMARY KEY (id);
+ALTER TABLE cat_2
+  ADD FULLTEXT KEY english (english, spanish);
 
 --
 -- Indexes for table `cat_3`
 --
-ALTER TABLE `cat_3`
-    ADD PRIMARY KEY (`id`);
-ALTER TABLE `cat_3`
-    ADD FULLTEXT KEY `english` (`english`, `spanish`);
+ALTER TABLE cat_3
+  ADD PRIMARY KEY (id);
+ALTER TABLE cat_3
+  ADD FULLTEXT KEY english (english, spanish);
 
 --
 -- Indexes for table `cat_4`
 --
-ALTER TABLE `cat_4`
-    ADD PRIMARY KEY (`id`);
-ALTER TABLE `cat_4`
-    ADD FULLTEXT KEY `english` (`english`, `spanish`);
+ALTER TABLE cat_4
+  ADD PRIMARY KEY (id);
+ALTER TABLE cat_4
+  ADD FULLTEXT KEY english (english, spanish);
 
 --
 -- Indexes for table `cat_5`
 --
-ALTER TABLE `cat_5`
-    ADD PRIMARY KEY (`id`);
-ALTER TABLE `cat_5`
-    ADD FULLTEXT KEY `english` (`english`, `spanish`);
+ALTER TABLE cat_5
+  ADD PRIMARY KEY (id);
+ALTER TABLE cat_5
+  ADD FULLTEXT KEY english (english, spanish);
 
 --
 -- Indexes for table `cat_6`
 --
-ALTER TABLE `cat_6`
-    ADD PRIMARY KEY (`id`);
-ALTER TABLE `cat_6`
-    ADD FULLTEXT KEY `english` (`english`, `spanish`);
+ALTER TABLE cat_6
+  ADD PRIMARY KEY (id);
+ALTER TABLE cat_6
+  ADD FULLTEXT KEY english (english, spanish);
 
 --
 -- Indexes for table `cat_7`
 --
-ALTER TABLE `cat_7`
-    ADD PRIMARY KEY (`id`);
-ALTER TABLE `cat_7`
-    ADD FULLTEXT KEY `english` (`english`, `spanish`);
+ALTER TABLE cat_7
+  ADD PRIMARY KEY (id);
+ALTER TABLE cat_7
+  ADD FULLTEXT KEY english (english, spanish);
 
 --
 -- Indexes for table `cat_8`
 --
-ALTER TABLE `cat_8`
-    ADD PRIMARY KEY (`id`);
-ALTER TABLE `cat_8`
-    ADD FULLTEXT KEY `english` (`english`, `spanish`);
+ALTER TABLE cat_8
+  ADD PRIMARY KEY (id);
+ALTER TABLE cat_8
+  ADD FULLTEXT KEY english (english, spanish);
 
 --
 -- Indexes for table `cat_9`
 --
-ALTER TABLE `cat_9`
-    ADD PRIMARY KEY (`id`);
-ALTER TABLE `cat_9`
-    ADD FULLTEXT KEY `english` (`english`, `spanish`);
+ALTER TABLE cat_9
+  ADD PRIMARY KEY (id);
+ALTER TABLE cat_9
+  ADD FULLTEXT KEY english (english, spanish);
 
 --
 -- Indexes for table `reg`
 --
-ALTER TABLE `reg`
-    ADD PRIMARY KEY (`id`);
+ALTER TABLE reg
+  ADD PRIMARY KEY (id);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -752,72 +751,72 @@ ALTER TABLE `reg`
 --
 -- AUTO_INCREMENT for table `cat_1`
 --
-ALTER TABLE `cat_1`
-    MODIFY `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 23;
+ALTER TABLE cat_1
+  MODIFY id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 23;
 
 --
 -- AUTO_INCREMENT for table `cat_2`
 --
-ALTER TABLE `cat_2`
-    MODIFY `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 71;
+ALTER TABLE cat_2
+  MODIFY id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 71;
 
 --
 -- AUTO_INCREMENT for table `cat_3`
 --
-ALTER TABLE `cat_3`
-    MODIFY `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 21;
+ALTER TABLE cat_3
+  MODIFY id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 21;
 
 --
 -- AUTO_INCREMENT for table `cat_4`
 --
-ALTER TABLE `cat_4`
-    MODIFY `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 37;
+ALTER TABLE cat_4
+  MODIFY id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 37;
 
 --
 -- AUTO_INCREMENT for table `cat_5`
 --
-ALTER TABLE `cat_5`
-    MODIFY `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 6;
+ALTER TABLE cat_5
+  MODIFY id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 6;
 
 --
 -- AUTO_INCREMENT for table `cat_6`
 --
-ALTER TABLE `cat_6`
-    MODIFY `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 77;
+ALTER TABLE cat_6
+  MODIFY id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 77;
 
 --
 -- AUTO_INCREMENT for table `cat_7`
 --
-ALTER TABLE `cat_7`
-    MODIFY `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 119;
+ALTER TABLE cat_7
+  MODIFY id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 119;
 
 --
 -- AUTO_INCREMENT for table `cat_8`
 --
-ALTER TABLE `cat_8`
-    MODIFY `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 47;
+ALTER TABLE cat_8
+  MODIFY id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 47;
 
 --
 -- AUTO_INCREMENT for table `cat_9`
 --
-ALTER TABLE `cat_9`
-    MODIFY `id` SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 12;
+ALTER TABLE cat_9
+  MODIFY id SMALLINT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 12;
 
 --
 -- AUTO_INCREMENT for table `reg`
 --
-ALTER TABLE `reg`
-    MODIFY `id` TINYINT(3) UNSIGNED NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 10;
+ALTER TABLE reg
+  MODIFY id TINYINT(3) UNSIGNED NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT = @old_character_set_client */;

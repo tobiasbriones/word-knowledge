@@ -12,24 +12,23 @@ require_once "../../../vendor/autoload.php";
 use App\Database\UsersDB;
 use App\UserManager;
 
-
 $conversations = array();
 
 try {
     $conn = UsersDB::newInstance();
     $userId = UserManager::retrieveUserId();
-    
+
     if ($userId == UserManager::NO_USER) {
         exit();
     }
     $newMessagesRows = getNewMessages($conn, $userId);
     $messagesRows = getMessages($conn, $userId);
-    
+
     foreach ($messagesRows as $messageRow) {
         $message = getMessage($messageRow, $conn, $userId);
         $conversationItem = $message["ci"];
         $messageObject = $message["message"];
-        
+
         if (!isset($conversations[$conversationItem])) {
             $conversations[$conversationItem] = array();
             $conversations[$conversationItem]["unread"] = false;
@@ -37,7 +36,7 @@ try {
         }
         $conversation = &$conversations[$conversationItem];
         $conversation["messages"][] = $messageObject;
-        
+
         if (in_array($messageObject->sender, $newMessagesRows)) {
             $conversation["unread"] = true;
         }
@@ -55,7 +54,7 @@ function getNewMessages($conn, $userId) {
     $query = "SELECT new_messages FROM user_data WHERE user_id = '$userId'";
     $result = $conn->query($query);
     $userNM = $result->fetchAll()[0]["new_messages"];
-    
+
     return json_decode($userNM, true);
 }
 
@@ -75,9 +74,12 @@ function getMessage($messageRow, $conn, $userId) {
     $message->receiver = $messageRow["receiver"];
     $message->date = $messageRow["date"];
     $message->message = $messageRow["message"];
-    
+
     $senderName = ($message->sender != $userId) ? getSenderName($conn, $message->sender) : null;
-    $receiverName = ($message->receiver != $userId) ? getReceiverName($conn, $message->receiver) : null;
+    $receiverName = ($message->receiver != $userId) ? getReceiverName(
+        $conn,
+        $message->receiver
+    ) : null;
     $conversationItem = ($senderName != null) ? $senderName : $receiverName;
     $messageType = ($senderName != null) ? "input" : "output";
     $message->messageType = $messageType;
@@ -88,10 +90,11 @@ function getSenderName($conn, $senderId) {
     if ($senderId == 0) {
         return "SGC Learning";
     }
-    return $conn->query("SELECT user FROM register WHERE user_id = '$senderId'")->fetchAll()[0]["user"];
+    return $conn->query("SELECT user FROM register WHERE user_id = '$senderId'")->fetchAll(
+    )[0]["user"];
 }
 
 function getReceiverName($conn, $receiverId) {
-    return $conn->query("SELECT user FROM register WHERE user_id = '$receiverId'")->fetchAll()[0]["user"];
+    return $conn->query("SELECT user FROM register WHERE user_id = '$receiverId'")->fetchAll(
+    )[0]["user"];
 }
-	

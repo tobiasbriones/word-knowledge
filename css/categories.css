@@ -38,8 +38,8 @@
   bottom: 0;
   left: 0;
   font-size: 12px;
-  background: rgba(0, 0, 0, 0.6);
   text-align: center;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .cat-title span {
@@ -49,8 +49,8 @@
   top: 50%;
   left: 50%;
   font-size: 1.1em;
-  transform: translate(-50%, -50%);
   color: white;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 480px) {
@@ -71,7 +71,7 @@
   .cat-title span {
     font-size: 1.2em;
   }
-  
+
   .cat-cell {
     width: 28%;
   }

@@ -17,10 +17,10 @@ function getReceiver() {
   const pageURL = decodeURIComponent(window.location.search.substring(1));
   const urlParams = pageURL.split('&');
   const param = 'user';
-  
+
   for (let i = 0; i < urlParams.length; i++) {
     const paramName = urlParams[i].split('=');
-    
+
     if (paramName[0] === param) {
       return paramName[1] === undefined ? true : paramName[1];
     }
@@ -31,23 +31,23 @@ function onReady() {
   container = $('.container');
   isSmallSize = isSmall();
   const sendMsgAction = $('#action_send_msg');
-  
+
   if (sendMsgAction.length) {
     sendMsgAction.click(onActionItem);
-    $('#send_msg').click(function() {
+    $('#send_msg').click(function () {
       const rec = getReceiver();
       const msg = $('#msg').val();
-      
+
       if ($.trim(msg).length === 0) {
         return;
       }
-      
+
       const params = { 'msg': msg, 'receiver': rec };
       const request = $.post('backend/ajax/send_message.php', params);
-      
-      request.done(function(data) {
+
+      request.done(function (data) {
         const msg = $('#msg');
-        
+
         if (data === 'false') {
           msg.val('Sorry, too many messages in this session');
           return;
@@ -62,7 +62,7 @@ function onResize() {
   if (isSmallSize !== isSmall()) {
     isSmallSize = isSmall();
     const pane = $('.msg-panel');
-    
+
     if (isMsgPaneOpen) {
       if (isSmallSize) {
         container.css('transform', 'translateX(0%)');
@@ -86,10 +86,12 @@ function onActionItem() {
 }
 
 function showMessagePanel() {
-  if (isMsgPaneOpen) return;
+  if (isMsgPaneOpen) {
+    return;
+  }
   isMsgPaneOpen = true;
   const pane = $('.msg-panel');
-  
+
   if (!isSmall()) {
     pane.css('opacity', '1');
     pane.css('transform', 'translateX(0%)');
@@ -101,10 +103,12 @@ function showMessagePanel() {
 }
 
 function hideMessagePane() {
-  if (!isMsgPaneOpen) return;
+  if (!isMsgPaneOpen) {
+    return;
+  }
   isMsgPaneOpen = false;
   const pane = $('.msg-panel');
-  
+
   if (!isSmall()) {
     pane.css('opacity', '0');
     pane.css('transform', 'translateX(100%)');
