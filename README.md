@@ -28,18 +28,22 @@ development and to apply programming to my English studies.
 ----
 ![Screenshot 3](https://github.com/tobiasbriones/word-knowledge/releases/download/v0.0.1/screenshot-3.png)
 
-## License
+## About
 
-Word Knowledge
+**Word Knowledge**
 
-Copyright © 2015, 2020 Tobias Briones. All rights reserved.
+App that lets you play word games for fun or practicing languages.
 
-This software is licensed under the [BSD 3-Clause License](LICENSE).
+Copyright © 2015, 2020-2022 Tobias Briones. All rights reserved.
+
+### License
+
+This project is licensed under the [BSD 3-Clause License](LICENSE).
 
 ---
 
-This project includes images and libraries, see the [NOTICE](NOTICE) file 
-for more details.
+This project includes images and libraries, see [NOTICE](NOTICE) for more 
+details.
 
 ## My Story
 
