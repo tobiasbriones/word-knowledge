@@ -22,11 +22,11 @@ development and to apply programming to my English studies.
 
 ## Screenshots
 
-![Screenshot 1](https://raw.githubusercontent.com/tobiasbriones/images-nl/main/word-knowledge/screenshot-1.png)
-===
-![Screenshot 2](https://raw.githubusercontent.com/tobiasbriones/images-nl/main/word-knowledge/screenshot-2.png)
-===
-![Screenshot 3](https://raw.githubusercontent.com/tobiasbriones/images-nl/main/word-knowledge/screenshot-3.png)
+![Screenshot 1](https://github.com/tobiasbriones/word-knowledge/releases/download/v0.0.1/screenshot-1.png)
+---
+![Screenshot 2](https://github.com/tobiasbriones/word-knowledge/releases/download/v0.0.1/screenshot-2.png)
+----
+![Screenshot 3](https://github.com/tobiasbriones/word-knowledge/releases/download/v0.0.1/screenshot-3.png)
 
 ## License
 
@@ -34,15 +34,12 @@ Word Knowledge
 
 Copyright © 2015, 2020 Tobias Briones. All rights reserved.
 
-This software is licensed under
-the [BSD 3-Clause License](https://github.com/TobiasBriones/word-knowledge/blob/master/LICENSE)
-.
+This software is licensed under the [BSD 3-Clause License](LICENSE).
 
-***
+---
 
-This project includes images and libraries, see
-the [NOTICE](https://github.com/TobiasBriones/word-knowledge/blob/master/NOTICE)
-file for more details.
+This project includes images and libraries, see the [NOTICE](NOTICE) file 
+for more details.
 
 ## My Story
 
