@@ -46,7 +46,7 @@ details.
 
 My days back in 2015 were all about learning many new things. I started learning many other
 programming languages and technologies for web development, say, jQuery, PHP, MySQL, and stuff. On
-the other hand, I was strengthening my maths background of course! by taking advantage that I was
+the other hand, I was strengthening my math background of course! by taking advantage that I was
 out-of-school those days and so that I had time to *study* and learn instead of being losing my
 valuable time in the meaningless dysfunctional education system we were enforced to pass by. I was
 also learning English and that way sitting in front of my old piece of computer that I had is where
